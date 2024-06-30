@@ -9,21 +9,94 @@
 /* Begin PBXBuildFile section */
 		F6328D032BEEEC6200BF0E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */; };
 		F6328D052BEEEC6200BF0E40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */; };
-		F6328D072BEEEC6200BF0E40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D062BEEEC6200BF0E40 /* ViewController.swift */; };
 		F6328D0A2BEEEC6200BF0E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6328D082BEEEC6200BF0E40 /* Main.storyboard */; };
 		F6328D0C2BEEEC6800BF0E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6328D0B2BEEEC6800BF0E40 /* Assets.xcassets */; };
 		F6328D0F2BEEEC6800BF0E40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6328D0D2BEEEC6800BF0E40 /* LaunchScreen.storyboard */; };
+		F6328D1A2BEEED4200BF0E40 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D182BEEED4200BF0E40 /* LaunchViewController.swift */; };
+		F6328D1B2BEEED4300BF0E40 /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D192BEEED4200BF0E40 /* LaunchViewController.xib */; };
+		F6328D1F2BEF023D00BF0E40 /* SetLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D1D2BEF023D00BF0E40 /* SetLanguageViewController.swift */; };
+		F6328D202BEF023D00BF0E40 /* SetLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D1E2BEF023D00BF0E40 /* SetLanguageViewController.xib */; };
+		F6328D262BEF0D4100BF0E40 /* SetCurrentBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D242BEF0D4100BF0E40 /* SetCurrentBalanceViewController.swift */; };
+		F6328D272BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D252BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib */; };
+		F6328D2A2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D282BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift */; };
+		F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */; };
+		F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */; };
+		F6B1A67E2BF70E6900A7D65C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */; };
+		F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */; };
+		F6B1A6862BF74F8000A7D65C /* LanguagesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A6852BF74F8000A7D65C /* LanguagesExtension.swift */; };
+		F6B1A6892BF756B900A7D65C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6B1A68B2BF756B900A7D65C /* Localizable.strings */; };
+		F6B1A69B2BF78DE600A7D65C /* OTPScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A6992BF78DE600A7D65C /* OTPScreenViewController.swift */; };
+		F6B1A69C2BF78DE600A7D65C /* OTPScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1A69A2BF78DE600A7D65C /* OTPScreenViewController.xib */; };
+		F6E8265B2BEF368100AEE7D9 /* SetPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826592BEF368100AEE7D9 /* SetPasscodeViewController.swift */; };
+		F6E8265C2BEF368100AEE7D9 /* SetPasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8265A2BEF368100AEE7D9 /* SetPasscodeViewController.xib */; };
+		F6E826602BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8265E2BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift */; };
+		F6E826612BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8265F2BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib */; };
+		F6E826662BEF41F900AEE7D9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826642BEF41F900AEE7D9 /* HomeViewController.swift */; };
+		F6E826672BEF41F900AEE7D9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E826652BEF41F900AEE7D9 /* HomeViewController.xib */; };
+		F6E8266A2BF6222100AEE7D9 /* NewTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826682BF6222100AEE7D9 /* NewTransactionViewController.swift */; };
+		F6E8266B2BF6222100AEE7D9 /* NewTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E826692BF6222100AEE7D9 /* NewTransactionViewController.xib */; };
+		F6E826702BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8266E2BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift */; };
+		F6E826712BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8266F2BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib */; };
+		F6E826782BF643D300AEE7D9 /* AllTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826762BF643D200AEE7D9 /* AllTransactionsViewController.swift */; };
+		F6E826792BF643D300AEE7D9 /* AllTransactionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E826772BF643D200AEE7D9 /* AllTransactionsViewController.xib */; };
+		F6E826832BF6577200AEE7D9 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826822BF6577200AEE7D9 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6E826882BF65D1700AEE7D9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow_Storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6328D062BEEEC6200BF0E40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6328D092BEEEC6200BF0E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6328D0B2BEEEC6800BF0E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6328D0E2BEEEC6800BF0E40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6328D102BEEEC6800BF0E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6328D182BEEED4200BF0E40 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		F6328D192BEEED4200BF0E40 /* LaunchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchViewController.xib; sourceTree = "<group>"; };
+		F6328D1D2BEF023D00BF0E40 /* SetLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLanguageViewController.swift; sourceTree = "<group>"; };
+		F6328D1E2BEF023D00BF0E40 /* SetLanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetLanguageViewController.xib; sourceTree = "<group>"; };
+		F6328D242BEF0D4100BF0E40 /* SetCurrentBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCurrentBalanceViewController.swift; sourceTree = "<group>"; };
+		F6328D252BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetCurrentBalanceViewController.xib; sourceTree = "<group>"; };
+		F6328D282BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBaseCurrencyViewController.swift; sourceTree = "<group>"; };
+		F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetBaseCurrencyViewController.xib; sourceTree = "<group>"; };
+		F6B1A67B2BF70C6700A7D65C /* MainCoreDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainCoreDB.xcdatamodel; sourceTree = "<group>"; };
+		F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
+		F6B1A6852BF74F8000A7D65C /* LanguagesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesExtension.swift; sourceTree = "<group>"; };
+		F6B1A68A2BF756B900A7D65C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6B1A68C2BF7570B00A7D65C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		F6B1A68D2BF7570C00A7D65C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F6B1A68E2BF7570C00A7D65C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6B1A6952BF77FD400A7D65C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		F6B1A6962BF77FD500A7D65C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F6B1A6972BF77FD500A7D65C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F6B1A6992BF78DE600A7D65C /* OTPScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPScreenViewController.swift; sourceTree = "<group>"; };
+		F6B1A69A2BF78DE600A7D65C /* OTPScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPScreenViewController.xib; sourceTree = "<group>"; };
+		F6E826592BEF368100AEE7D9 /* SetPasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasscodeViewController.swift; sourceTree = "<group>"; };
+		F6E8265A2BEF368100AEE7D9 /* SetPasscodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetPasscodeViewController.xib; sourceTree = "<group>"; };
+		F6E8265E2BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewController.swift; sourceTree = "<group>"; };
+		F6E8265F2BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeLanguageViewController.xib; sourceTree = "<group>"; };
+		F6E826642BEF41F900AEE7D9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6E826652BEF41F900AEE7D9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F6E826682BF6222100AEE7D9 /* NewTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTransactionViewController.swift; sourceTree = "<group>"; };
+		F6E826692BF6222100AEE7D9 /* NewTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTransactionViewController.xib; sourceTree = "<group>"; };
+		F6E8266E2BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTransactionTableViewCell.swift; sourceTree = "<group>"; };
+		F6E8266F2BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LastTransactionTableViewCell.xib; sourceTree = "<group>"; };
+		F6E826762BF643D200AEE7D9 /* AllTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTransactionsViewController.swift; sourceTree = "<group>"; };
+		F6E826772BF643D200AEE7D9 /* AllTransactionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllTransactionsViewController.xib; sourceTree = "<group>"; };
+		F6E826822BF6577200AEE7D9 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +115,7 @@
 			children = (
 				F6328D012BEEEC6200BF0E40 /* CashFlow_Storyboard */,
 				F6328D002BEEEC6200BF0E40 /* Products */,
+				F6E826842BF65D1600AEE7D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +130,169 @@
 		F6328D012BEEEC6200BF0E40 /* CashFlow_Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F6E8266C2BF63C8F00AEE7D9 /* Cells */,
+				F6328D162BEEECB000BF0E40 /* Controllers */,
+				F6E8267F2BF656FD00AEE7D9 /* Assistant Files */,
+				F6328D172BEEECD900BF0E40 /* AppUtils */,
 				F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */,
 				F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */,
-				F6328D062BEEEC6200BF0E40 /* ViewController.swift */,
-				F6328D082BEEEC6200BF0E40 /* Main.storyboard */,
-				F6328D0B2BEEEC6800BF0E40 /* Assets.xcassets */,
-				F6328D0D2BEEEC6800BF0E40 /* LaunchScreen.storyboard */,
 				F6328D102BEEEC6800BF0E40 /* Info.plist */,
+				F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */,
 			);
 			path = CashFlow_Storyboard;
+			sourceTree = "<group>";
+		};
+		F6328D162BEEECB000BF0E40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8265D2BEF3BF900AEE7D9 /* ChangeLanguageVC */,
+				F6E826752BF6439800AEE7D9 /* AllTransactionVC */,
+				F6E826632BEF41D800AEE7D9 /* NewTransactionVC */,
+				F6E826622BEF41C000AEE7D9 /* HomeVC */,
+				F6B1A6982BF78D8500A7D65C /* OTPScreenVC */,
+				F6E826582BEF354D00AEE7D9 /* SetPasscodeVC */,
+				F6328D232BEF0CB100BF0E40 /* SetCurrentBalanceVC */,
+				F6328D222BEF0C6C00BF0E40 /* SetBaseCurrencyVC */,
+				F6328D212BEF025600BF0E40 /* SetLanguageVC */,
+				F6328D1C2BEEED5200BF0E40 /* LaunchVC */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F6328D172BEEECD900BF0E40 /* AppUtils */ = {
+			isa = PBXGroup;
+			children = (
+				F6328D082BEEEC6200BF0E40 /* Main.storyboard */,
+				F6328D0D2BEEEC6800BF0E40 /* LaunchScreen.storyboard */,
+				F6328D0B2BEEEC6800BF0E40 /* Assets.xcassets */,
+			);
+			path = AppUtils;
+			sourceTree = "<group>";
+		};
+		F6328D1C2BEEED5200BF0E40 /* LaunchVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6328D182BEEED4200BF0E40 /* LaunchViewController.swift */,
+				F6328D192BEEED4200BF0E40 /* LaunchViewController.xib */,
+			);
+			path = LaunchVC;
+			sourceTree = "<group>";
+		};
+		F6328D212BEF025600BF0E40 /* SetLanguageVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6328D1D2BEF023D00BF0E40 /* SetLanguageViewController.swift */,
+				F6328D1E2BEF023D00BF0E40 /* SetLanguageViewController.xib */,
+			);
+			path = SetLanguageVC;
+			sourceTree = "<group>";
+		};
+		F6328D222BEF0C6C00BF0E40 /* SetBaseCurrencyVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6328D282BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift */,
+				F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */,
+			);
+			path = SetBaseCurrencyVC;
+			sourceTree = "<group>";
+		};
+		F6328D232BEF0CB100BF0E40 /* SetCurrentBalanceVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6328D242BEF0D4100BF0E40 /* SetCurrentBalanceViewController.swift */,
+				F6328D252BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib */,
+			);
+			path = SetCurrentBalanceVC;
+			sourceTree = "<group>";
+		};
+		F6B1A6982BF78D8500A7D65C /* OTPScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6B1A6992BF78DE600A7D65C /* OTPScreenViewController.swift */,
+				F6B1A69A2BF78DE600A7D65C /* OTPScreenViewController.xib */,
+			);
+			path = OTPScreenVC;
+			sourceTree = "<group>";
+		};
+		F6E826582BEF354D00AEE7D9 /* SetPasscodeVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6E826592BEF368100AEE7D9 /* SetPasscodeViewController.swift */,
+				F6E8265A2BEF368100AEE7D9 /* SetPasscodeViewController.xib */,
+			);
+			path = SetPasscodeVC;
+			sourceTree = "<group>";
+		};
+		F6E8265D2BEF3BF900AEE7D9 /* ChangeLanguageVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8265E2BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift */,
+				F6E8265F2BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib */,
+			);
+			path = ChangeLanguageVC;
+			sourceTree = "<group>";
+		};
+		F6E826622BEF41C000AEE7D9 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6E826642BEF41F900AEE7D9 /* HomeViewController.swift */,
+				F6E826652BEF41F900AEE7D9 /* HomeViewController.xib */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
+		F6E826632BEF41D800AEE7D9 /* NewTransactionVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6E826682BF6222100AEE7D9 /* NewTransactionViewController.swift */,
+				F6E826692BF6222100AEE7D9 /* NewTransactionViewController.xib */,
+			);
+			path = NewTransactionVC;
+			sourceTree = "<group>";
+		};
+		F6E8266C2BF63C8F00AEE7D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8266D2BF63F7C00AEE7D9 /* LastTransactionCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6E8266D2BF63F7C00AEE7D9 /* LastTransactionCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6E8266E2BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift */,
+				F6E8266F2BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib */,
+			);
+			path = LastTransactionCell;
+			sourceTree = "<group>";
+		};
+		F6E826752BF6439800AEE7D9 /* AllTransactionVC */ = {
+			isa = PBXGroup;
+			children = (
+				F6E826762BF643D200AEE7D9 /* AllTransactionsViewController.swift */,
+				F6E826772BF643D200AEE7D9 /* AllTransactionsViewController.xib */,
+			);
+			path = AllTransactionVC;
+			sourceTree = "<group>";
+		};
+		F6E8267F2BF656FD00AEE7D9 /* Assistant Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E826822BF6577200AEE7D9 /* UserDefaults.swift */,
+				F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */,
+				F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */,
+				F6B1A6852BF74F8000A7D65C /* LanguagesExtension.swift */,
+				F6B1A68B2BF756B900A7D65C /* Localizable.strings */,
+			);
+			path = "Assistant Files";
+			sourceTree = "<group>";
+		};
+		F6E826842BF65D1600AEE7D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +305,15 @@
 				F6328CFB2BEEEC6200BF0E40 /* Sources */,
 				F6328CFC2BEEEC6200BF0E40 /* Frameworks */,
 				F6328CFD2BEEEC6200BF0E40 /* Resources */,
+				F6E826882BF65D1700AEE7D9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CashFlow_Storyboard;
+			packageProductDependencies = (
+			);
 			productName = CashFlow_Storyboard;
 			productReference = F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */;
 			productType = "com.apple.product-type.application";
@@ -109,8 +340,12 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
+				ru,
 			);
 			mainGroup = F6328CF62BEEEC6200BF0E40;
+			packageReferences = (
+			);
 			productRefGroup = F6328D002BEEEC6200BF0E40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +362,19 @@
 			files = (
 				F6328D0F2BEEEC6800BF0E40 /* LaunchScreen.storyboard in Resources */,
 				F6328D0C2BEEEC6800BF0E40 /* Assets.xcassets in Resources */,
+				F6E826792BF643D300AEE7D9 /* AllTransactionsViewController.xib in Resources */,
+				F6B1A6892BF756B900A7D65C /* Localizable.strings in Resources */,
+				F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */,
+				F6E826612BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib in Resources */,
+				F6E8265C2BEF368100AEE7D9 /* SetPasscodeViewController.xib in Resources */,
 				F6328D0A2BEEEC6200BF0E40 /* Main.storyboard in Resources */,
+				F6B1A69C2BF78DE600A7D65C /* OTPScreenViewController.xib in Resources */,
+				F6328D202BEF023D00BF0E40 /* SetLanguageViewController.xib in Resources */,
+				F6E826672BEF41F900AEE7D9 /* HomeViewController.xib in Resources */,
+				F6E826712BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib in Resources */,
+				F6328D272BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib in Resources */,
+				F6328D1B2BEEED4300BF0E40 /* LaunchViewController.xib in Resources */,
+				F6E8266B2BF6222100AEE7D9 /* NewTransactionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +385,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6328D072BEEEC6200BF0E40 /* ViewController.swift in Sources */,
+				F6B1A69B2BF78DE600A7D65C /* OTPScreenViewController.swift in Sources */,
+				F6E8265B2BEF368100AEE7D9 /* SetPasscodeViewController.swift in Sources */,
 				F6328D032BEEEC6200BF0E40 /* AppDelegate.swift in Sources */,
+				F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */,
+				F6B1A67E2BF70E6900A7D65C /* CoreDataManager.swift in Sources */,
+				F6328D262BEF0D4100BF0E40 /* SetCurrentBalanceViewController.swift in Sources */,
+				F6328D1F2BEF023D00BF0E40 /* SetLanguageViewController.swift in Sources */,
+				F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */,
+				F6E8266A2BF6222100AEE7D9 /* NewTransactionViewController.swift in Sources */,
+				F6328D2A2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift in Sources */,
+				F6E826782BF643D300AEE7D9 /* AllTransactionsViewController.swift in Sources */,
+				F6E826662BEF41F900AEE7D9 /* HomeViewController.swift in Sources */,
 				F6328D052BEEEC6200BF0E40 /* SceneDelegate.swift in Sources */,
+				F6E826832BF6577200AEE7D9 /* UserDefaults.swift in Sources */,
+				F6E826702BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift in Sources */,
+				F6E826602BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift in Sources */,
+				F6328D1A2BEEED4200BF0E40 /* LaunchViewController.swift in Sources */,
+				F6B1A6862BF74F8000A7D65C /* LanguagesExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +413,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				F6328D092BEEEC6200BF0E40 /* Base */,
+				F6B1A68C2BF7570B00A7D65C /* ko */,
+				F6B1A6952BF77FD400A7D65C /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -159,8 +423,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				F6328D0E2BEEEC6800BF0E40 /* Base */,
+				F6B1A68D2BF7570C00A7D65C /* ko */,
+				F6B1A6962BF77FD500A7D65C /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F6B1A68B2BF756B900A7D65C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6B1A68A2BF756B900A7D65C /* en */,
+				F6B1A68E2BF7570C00A7D65C /* ko */,
+				F6B1A6972BF77FD500A7D65C /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -170,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -216,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -230,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -270,7 +548,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -285,16 +563,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LWVBT323AX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CashFlow_Storyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,16 +598,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LWVBT323AX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CashFlow_Storyboard/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +650,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F6B1A67B2BF70C6700A7D65C /* MainCoreDB.xcdatamodel */,
+			);
+			currentVersion = F6B1A67B2BF70C6700A7D65C /* MainCoreDB.xcdatamodel */;
+			path = MainCoreDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F6328CF72BEEEC6200BF0E40 /* Project object */;
 }

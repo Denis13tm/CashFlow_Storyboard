@@ -85,6 +85,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         animatedTableView()
     }
     
+    // MARK: - Actions
+    
     @IBAction func viewAllBtn_Action(_ sender: Any) {
         callAllTrnsScreen()
     }
@@ -111,7 +113,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         callLineChartScreen()
     }
     
-    
     //...Set up selectedbutton background view
     func setSelectedProfitBtn() {
         exp_profit_BViewImage.image = UIImage(named: "gradiantBV")
@@ -122,7 +123,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         exp_cost_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
         transactions_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
         
-        transactions = TransactionService.shared.fetchTransactions()
+        transactions = coreDB.fetchIncomeTransactions()
         table_View.reloadData()
     }
     func setSelectedTransactionBtn() {
@@ -146,7 +147,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         transactions_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
         exp_profit_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
         
-        transactions = TransactionService.shared.fetchTransactions()
+        transactions = coreDB.fetchExpenseTransactions()
         table_View.reloadData()
     }
 
@@ -183,22 +184,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         totalBalance_BV.layer.cornerRadius = 22.0
         modifierUI(ui: totalBalance_BV)
-        
-//        notificationCenter.delegate = self
-        
-//        let img = defaults.getProfileImage()
-//        
-//        if img != nil && img != ""{
-//            main_img.image = defaults.getProfileImage()?.toImage()
-//        }
-//        localizationBtn.setTitle(defaults.getLanguage(), for: .normal)
-        
-        
-        
-//        modifierUI(ui: navigationBarBackgroundView)
-//        main_img.layer.cornerRadius = 22.0
-//        localizationBtn.layer.cornerRadius = 8.0
-//        totalMoney_view.layer.cornerRadius = 22.0
         
         totalBalance.text = Int(defaults.getCashBalance()!)?.formattedWithSeparator
         baseCurrency.text = defaults.getCurrency()
@@ -352,11 +337,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let lastTransaction = transactions[indexPath.row]
         
         
-        if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Income ▼" {
+        if baseCurrency.text == "USD" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyUS
-        } else if lastTransaction.type == "경비 ▼" || lastTransaction.type == "수입 ▼" {
+        } else if baseCurrency.text == "WON" || baseCurrency.text == "원" || baseCurrency.text == "вон" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyKR
-        } else if lastTransaction.type == "Chiqim ▼" || lastTransaction.type == "Kirim ▼" {
+        } else if baseCurrency.text == "SUM" || baseCurrency.text == "сум" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyUZ
         }
 

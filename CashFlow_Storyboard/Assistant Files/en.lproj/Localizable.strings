@@ -46,9 +46,9 @@
 "totalBalance" = "TOTAL BALANCE";
 "income" = "Income";
 "expense" = "Expense";
-"expProfit" = "Expecting Profit";
+"expProfit" = "Incomes";
 "transaction" = "Transactions";
-"expCost" = "Expecting Cost";
+"expCost" = "Costs";
 "lastTranLabel" = "Last Transactions";
 "viewAll" = "View all";
 "todayLabel" = "TODAY";
@@ -58,7 +58,6 @@
 "actionSheetTitle" = "Would you like to delete this transaction?";
 "actionSheetDeleteTitle" = "Delete";
 "actionSheetCancelTitle" = "Cancel";
-
 
 // Add Transaction Screen
 "title5" = "Add Transaction";
@@ -96,27 +95,6 @@
 "expense_Edition" = "Expense";
 "cancelBtn" = "Cancel";
 "saveChangesBtn" = "Save changes";
-
-
-// Category Items
-"exp_Income" = "Expecting Income";
-"moneyTransfer" = "Money Transfer";
-"books" = "Books";
-"rent" = "Rent";
-"carPayment" = "Car Payment";
-"education" = "Education";
-"food" = "Grocery Shopping";
-"healthCare" = "Health Care";
-"salary" = "Salary";
-"taxes" = "Taxes";
-"netflixSubs" = "Netflix Subscription";
-"travel" = "Travel";
-"transportation" = "Transportation Fee";
-"activity" = "Activity";
-"entertainment" = "Entertainment";
-"shopping" = "Shopping";
-"hairCut" = "Hair Cut";
-"tools" = "Tools";
 
 //Exchange Currency
 "title9" = "Currency Converter";

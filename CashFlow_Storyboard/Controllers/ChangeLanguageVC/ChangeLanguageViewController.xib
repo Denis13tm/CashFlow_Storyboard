@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,6 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeLanguageViewController" customModule="CashFlow_Storyboard" customModuleProvider="target">
             <connections>
+                <outlet property="eng_BV" destination="QJ5-Vw-8sd" id="QoC-WH-yAq"/>
+                <outlet property="english" destination="qze-P2-kcG" id="w1f-EN-o07"/>
+                <outlet property="kor_BV" destination="CZa-C1-AWF" id="GOt-GC-OE8"/>
+                <outlet property="korean" destination="KKp-oX-Zej" id="wLY-gE-tkK"/>
+                <outlet property="languageRange_BV" destination="zIl-Zd-QHe" id="IL6-Rq-sbI"/>
+                <outlet property="non_View" destination="zIl-Zd-QHe" id="OAh-LI-bcM"/>
+                <outlet property="uz_BV" destination="fRo-a9-adO" id="2KW-5B-BWO"/>
+                <outlet property="uzbek" destination="c9J-N6-va0" id="zQT-C1-8hw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -85,6 +94,9 @@
                             </constraints>
                             <color key="tintColor" red="0.093320764599999995" green="0.71968525650000004" blue="0.72538882490000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" backgroundImage="cross" catalog="system"/>
+                            <connections>
+                                <action selector="closeViewBtn_Action:" destination="-1" eventType="touchUpInside" id="CPO-In-wZY"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

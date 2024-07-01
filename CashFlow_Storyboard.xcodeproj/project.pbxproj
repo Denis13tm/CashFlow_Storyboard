@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F623EF092C321A6D0044B83D /* CurrencyConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF072C321A6D0044B83D /* CurrencyConverterViewController.swift */; };
+		F623EF0A2C321A6D0044B83D /* CurrencyConverterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF082C321A6D0044B83D /* CurrencyConverterViewController.xib */; };
+		F623EF0F2C32203E0044B83D /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF0E2C32203E0044B83D /* ExchangeRates.swift */; };
+		F623EF1B2C3296F90044B83D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF192C3296F80044B83D /* ProfileViewController.swift */; };
+		F623EF1C2C3296F90044B83D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF1A2C3296F90044B83D /* ProfileViewController.xib */; };
+		F623EF202C32A9F60044B83D /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */; };
+		F623EF212C32A9F60044B83D /* LineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */; };
 		F6328D032BEEEC6200BF0E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */; };
 		F6328D052BEEEC6200BF0E40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */; };
 		F6328D0A2BEEEC6200BF0E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6328D082BEEEC6200BF0E40 /* Main.storyboard */; };
@@ -56,6 +63,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F623EF072C321A6D0044B83D /* CurrencyConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterViewController.swift; sourceTree = "<group>"; };
+		F623EF082C321A6D0044B83D /* CurrencyConverterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyConverterViewController.xib; sourceTree = "<group>"; };
+		F623EF0E2C32203E0044B83D /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		F623EF192C3296F80044B83D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F623EF1A2C3296F90044B83D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartViewController.xib; sourceTree = "<group>"; };
 		F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow_Storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +124,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F623EF062C321A0A0044B83D /* CurrencyConverterVC */ = {
+			isa = PBXGroup;
+			children = (
+				F623EF072C321A6D0044B83D /* CurrencyConverterViewController.swift */,
+				F623EF082C321A6D0044B83D /* CurrencyConverterViewController.xib */,
+			);
+			path = CurrencyConverterVC;
+			sourceTree = "<group>";
+		};
+		F623EF0B2C321FFB0044B83D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F623EF0E2C32203E0044B83D /* ExchangeRates.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F623EF182C3296680044B83D /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				F623EF192C3296F80044B83D /* ProfileViewController.swift */,
+				F623EF1A2C3296F90044B83D /* ProfileViewController.xib */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		F623EF1D2C32A9B20044B83D /* LineChartVC */ = {
+			isa = PBXGroup;
+			children = (
+				F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */,
+				F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */,
+			);
+			path = LineChartVC;
+			sourceTree = "<group>";
+		};
 		F6328CF62BEEEC6200BF0E40 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +179,7 @@
 		F6328D012BEEEC6200BF0E40 /* CashFlow_Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				F623EF0B2C321FFB0044B83D /* Models */,
 				F6E8266C2BF63C8F00AEE7D9 /* Cells */,
 				F6328D162BEEECB000BF0E40 /* Controllers */,
 				F6E8267F2BF656FD00AEE7D9 /* Assistant Files */,
@@ -145,6 +195,9 @@
 		F6328D162BEEECB000BF0E40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F623EF1D2C32A9B20044B83D /* LineChartVC */,
+				F623EF182C3296680044B83D /* ProfileVC */,
+				F623EF062C321A0A0044B83D /* CurrencyConverterVC */,
 				F6E8265D2BEF3BF900AEE7D9 /* ChangeLanguageVC */,
 				F6E826752BF6439800AEE7D9 /* AllTransactionVC */,
 				F6E826632BEF41D800AEE7D9 /* NewTransactionVC */,
@@ -360,12 +413,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F623EF1C2C3296F90044B83D /* ProfileViewController.xib in Resources */,
 				F6328D0F2BEEEC6800BF0E40 /* LaunchScreen.storyboard in Resources */,
 				F6328D0C2BEEEC6800BF0E40 /* Assets.xcassets in Resources */,
 				F6E826792BF643D300AEE7D9 /* AllTransactionsViewController.xib in Resources */,
 				F6B1A6892BF756B900A7D65C /* Localizable.strings in Resources */,
+				F623EF212C32A9F60044B83D /* LineChartViewController.xib in Resources */,
 				F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */,
 				F6E826612BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib in Resources */,
+				F623EF0A2C321A6D0044B83D /* CurrencyConverterViewController.xib in Resources */,
 				F6E8265C2BEF368100AEE7D9 /* SetPasscodeViewController.xib in Resources */,
 				F6328D0A2BEEEC6200BF0E40 /* Main.storyboard in Resources */,
 				F6B1A69C2BF78DE600A7D65C /* OTPScreenViewController.xib in Resources */,
@@ -391,8 +447,11 @@
 				F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */,
 				F6B1A67E2BF70E6900A7D65C /* CoreDataManager.swift in Sources */,
 				F6328D262BEF0D4100BF0E40 /* SetCurrentBalanceViewController.swift in Sources */,
+				F623EF1B2C3296F90044B83D /* ProfileViewController.swift in Sources */,
 				F6328D1F2BEF023D00BF0E40 /* SetLanguageViewController.swift in Sources */,
 				F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */,
+				F623EF202C32A9F60044B83D /* LineChartViewController.swift in Sources */,
+				F623EF0F2C32203E0044B83D /* ExchangeRates.swift in Sources */,
 				F6E8266A2BF6222100AEE7D9 /* NewTransactionViewController.swift in Sources */,
 				F6328D2A2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift in Sources */,
 				F6E826782BF643D300AEE7D9 /* AllTransactionsViewController.swift in Sources */,
@@ -401,6 +460,7 @@
 				F6E826832BF6577200AEE7D9 /* UserDefaults.swift in Sources */,
 				F6E826702BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift in Sources */,
 				F6E826602BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift in Sources */,
+				F623EF092C321A6D0044B83D /* CurrencyConverterViewController.swift in Sources */,
 				F6328D1A2BEEED4200BF0E40 /* LaunchViewController.swift in Sources */,
 				F6B1A6862BF74F8000A7D65C /* LanguagesExtension.swift in Sources */,
 			);

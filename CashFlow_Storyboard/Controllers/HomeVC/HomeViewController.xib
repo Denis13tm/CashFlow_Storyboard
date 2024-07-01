@@ -375,6 +375,9 @@
                                                                     <state key="normal" title="View all">
                                                                         <color key="titleColor" red="0.22141029749999999" green="0.50955212390000004" blue="0.64128614029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="viewAllBtn_Action:" destination="-1" eventType="touchUpInside" id="YjD-MF-HXO"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -518,6 +521,9 @@
                                             <rect key="frame" x="2.6666666666666643" y="4.666666666666627" width="40" height="31"/>
                                             <color key="tintColor" red="0.031156491450000001" green="0.73474691459999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" backgroundImage="tray" catalog="system"/>
+                                            <connections>
+                                                <action selector="callLineChartScreenBtn_Action:" destination="-1" eventType="touchUpInside" id="qVA-4p-aBJ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
@@ -559,6 +565,9 @@
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                             <color key="tintColor" red="0.031156491450000001" green="0.73474691459999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" backgroundImage="coloncurrencysign.circle" catalog="system"/>
+                                            <connections>
+                                                <action selector="showCurrencyConvertorBtn_Action:" destination="-1" eventType="touchUpInside" id="YGP-Zi-3NL"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>

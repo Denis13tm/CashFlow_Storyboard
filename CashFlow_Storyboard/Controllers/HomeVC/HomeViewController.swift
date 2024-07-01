@@ -14,12 +14,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    func didButtonTapped(index: Int) {
-    }
-    
-    
-    
     @IBOutlet weak var totalBalance_BV: UIView!
     @IBOutlet weak var table_View: UITableView!
     
@@ -91,6 +85,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         animatedTableView()
     }
     
+    @IBAction func viewAllBtn_Action(_ sender: Any) {
+        callAllTrnsScreen()
+    }
+    
     
     @IBAction func expectingProfitBtn_Action(_ sender: Any) {
         setSelectedProfitBtn()
@@ -104,6 +102,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func addNewTrnBtn(_ sender: Any) {
         callAddNewTrnScreen()
+    }
+    @IBAction func showCurrencyConvertorBtn_Action(_ sender: Any) {
+        callCurrencyConverterScreen()
+    }
+    
+    @IBAction func callLineChartScreenBtn_Action(_ sender: Any) {
+        callLineChartScreen()
     }
     
     
@@ -162,7 +167,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     private func setLangValue() {
-//        localizationBtn.setTitle(lang, for: .normal)
         totalBalance_title.text = total_Balance
         incomeTitle.text = income
         expenseTitle.text = expense
@@ -229,17 +233,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         titleLabel.text = "Cash Flow"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
-        let rightNavBtn = UIImage(systemName: "folder.badge.gearshape")
+        let rightNavBtn1 = UIImage(systemName: "globe.asia.australia")
+        let rightNavBtn = UIImage(systemName: "slider.horizontal.3")
+        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: rightNavBtn, style: .plain, target: self, action: #selector(rightNavBarBtn))
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(image: rightNavBtn, style: .plain, target: self, action: #selector(rightNavBarBtn)),
+            UIBarButtonItem(image: rightNavBtn1, style: .plain, target: self, action: #selector(rightNavBarBtn1))]
     }
     
     @objc private func leftNavBarBtn() {
         callAddNewTrnScreen()
     }
     
+    @objc private func rightNavBarBtn1() {
+        callChangeLanguageScreen()
+    }
     @objc private func rightNavBarBtn() {
-        callAddNewTrnScreen()
+        callProfileScreen()
     }
     
   
@@ -254,7 +265,35 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let vc = NewTransactionViewController(nibName: "NewTransactionViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
         nv.modalPresentationStyle = .fullScreen
-//        self.present(nv, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func callAllTrnsScreen() {
+        let vc = AllTransactionsViewController(nibName: "AllTransactionsViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+        nv.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func callCurrencyConverterScreen() {
+        let vc = CurrencyConverterViewController(nibName: "CurrencyConverterViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+        self.present(nv, animated: true, completion: nil)
+    }
+    func callChangeLanguageScreen() {
+        let vc = ChangeLanguageViewController(nibName: "ChangeLanguageViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+        nv.modalPresentationStyle = .fullScreen
+        self.present(nv, animated: true, completion: nil)
+    }
+    func callProfileScreen() {
+        let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+        nv.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    func callLineChartScreen() {
+        let vc = LineChartViewController(nibName: "LineChartViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+        nv.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -312,7 +351,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = Bundle.main.loadNibNamed("LastTransactionTableViewCell", owner: self, options: nil)?.first as! LastTransactionTableViewCell
         let lastTransaction = transactions[indexPath.row]
         
-
+        
         if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Income ▼" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyUS
         } else if lastTransaction.type == "경비 ▼" || lastTransaction.type == "수입 ▼" {
@@ -323,13 +362,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
         if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Chiqim ▼" || lastTransaction.type == "경비 ▼" {
-            print("TEST_______>>>> \(String(describing: lastTransaction.type))")
             cell.amout.textColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
         } else {
             cell.amout.textColor = #colorLiteral(red: 0.4696043647, green: 0.8248788522, blue: 0.006127688114, alpha: 1)
         }
         
-        cell.amout.text = lastTransaction.amount
         cell.notes.text = lastTransaction.notes
         cell.date.text = lastTransaction.date
         

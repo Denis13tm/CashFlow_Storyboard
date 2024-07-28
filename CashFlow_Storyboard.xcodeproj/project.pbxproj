@@ -14,9 +14,6 @@
 		F623EF1C2C3296F90044B83D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF1A2C3296F90044B83D /* ProfileViewController.xib */; };
 		F623EF202C32A9F60044B83D /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */; };
 		F623EF212C32A9F60044B83D /* LineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */; };
-		F623EF362C32DFA90044B83D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F623EF352C32DFA90044B83D /* SnapKit */; };
-		F623EF392C32E2210044B83D /* SubLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF382C32E2210044B83D /* SubLineChartView.swift */; };
-		F623EF3B2C32FBCF0044B83D /* SubChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF3A2C32FBCF0044B83D /* SubChartView.swift */; };
 		F6328D032BEEEC6200BF0E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */; };
 		F6328D052BEEEC6200BF0E40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */; };
 		F6328D0A2BEEEC6200BF0E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6328D082BEEEC6200BF0E40 /* Main.storyboard */; };
@@ -32,7 +29,8 @@
 		F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */; };
 		F66D68E32C46EF4A00D16A7F /* SelectedTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */; };
 		F66D68E42C46EF4A00D16A7F /* SelectedTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */; };
-		F6A1BE752C34013D00D11A09 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F6A1BE742C34013D00D11A09 /* DGCharts */; };
+		F6A500562C5639670019B21A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F6A500552C5639670019B21A /* Lottie */; };
+		F6A5005B2C563DB90019B21A /* data-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = F6A5005A2C563DB90019B21A /* data-scanning.json */; };
 		F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */; };
 		F6B1A67E2BF70E6900A7D65C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */; };
 		F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */; };
@@ -76,8 +74,6 @@
 		F623EF1A2C3296F90044B83D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
 		F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartViewController.xib; sourceTree = "<group>"; };
-		F623EF382C32E2210044B83D /* SubLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubLineChartView.swift; sourceTree = "<group>"; };
-		F623EF3A2C32FBCF0044B83D /* SubChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubChartView.swift; sourceTree = "<group>"; };
 		F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow_Storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +91,7 @@
 		F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetBaseCurrencyViewController.xib; sourceTree = "<group>"; };
 		F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTransactionViewController.swift; sourceTree = "<group>"; };
 		F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedTransactionViewController.xib; sourceTree = "<group>"; };
+		F6A5005A2C563DB90019B21A /* data-scanning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-scanning.json"; sourceTree = "<group>"; };
 		F6B1A67B2BF70C6700A7D65C /* MainCoreDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainCoreDB.xcdatamodel; sourceTree = "<group>"; };
 		F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
@@ -128,8 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A1BE752C34013D00D11A09 /* DGCharts in Frameworks */,
-				F623EF362C32DFA90044B83D /* SnapKit in Frameworks */,
+				F6A500562C5639670019B21A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,20 +161,10 @@
 		F623EF1D2C32A9B20044B83D /* LineChartVC */ = {
 			isa = PBXGroup;
 			children = (
-				F623EF372C32E18A0044B83D /* SubLineChartVC */,
 				F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */,
 				F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */,
 			);
 			path = LineChartVC;
-			sourceTree = "<group>";
-		};
-		F623EF372C32E18A0044B83D /* SubLineChartVC */ = {
-			isa = PBXGroup;
-			children = (
-				F623EF382C32E2210044B83D /* SubLineChartView.swift */,
-				F623EF3A2C32FBCF0044B83D /* SubChartView.swift */,
-			);
-			path = SubLineChartVC;
 			sourceTree = "<group>";
 		};
 		F6328CF62BEEEC6200BF0E40 = {
@@ -290,6 +276,14 @@
 			path = SelectedTransactionVC;
 			sourceTree = "<group>";
 		};
+		F6A500592C563D840019B21A /* jsonfiles animation */ = {
+			isa = PBXGroup;
+			children = (
+				F6A5005A2C563DB90019B21A /* data-scanning.json */,
+			);
+			path = "jsonfiles animation";
+			sourceTree = "<group>";
+		};
 		F6B1A6982BF78D8500A7D65C /* OTPScreenVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +358,7 @@
 		F6E8267F2BF656FD00AEE7D9 /* Assistant Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6A500592C563D840019B21A /* jsonfiles animation */,
 				F6E826822BF6577200AEE7D9 /* UserDefaults.swift */,
 				F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */,
 				F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */,
@@ -398,8 +393,7 @@
 			);
 			name = CashFlow_Storyboard;
 			packageProductDependencies = (
-				F623EF352C32DFA90044B83D /* SnapKit */,
-				F6A1BE742C34013D00D11A09 /* DGCharts */,
+				F6A500552C5639670019B21A /* Lottie */,
 			);
 			productName = CashFlow_Storyboard;
 			productReference = F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */;
@@ -434,6 +428,7 @@
 			packageReferences = (
 				F623EF342C32DFA90044B83D /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */,
+				F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = F6328D002BEEEC6200BF0E40 /* Products */;
 			projectDirPath = "";
@@ -463,6 +458,7 @@
 				F6B1A69C2BF78DE600A7D65C /* OTPScreenViewController.xib in Resources */,
 				F6328D202BEF023D00BF0E40 /* SetLanguageViewController.xib in Resources */,
 				F6E826672BEF41F900AEE7D9 /* HomeViewController.xib in Resources */,
+				F6A5005B2C563DB90019B21A /* data-scanning.json in Resources */,
 				F6E826712BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib in Resources */,
 				F6328D272BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib in Resources */,
 				F6328D1B2BEEED4300BF0E40 /* LaunchViewController.xib in Resources */,
@@ -492,14 +488,12 @@
 				F623EF0F2C32203E0044B83D /* ExchangeRates.swift in Sources */,
 				F6E8266A2BF6222100AEE7D9 /* NewTransactionViewController.swift in Sources */,
 				F6328D2A2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift in Sources */,
-				F623EF392C32E2210044B83D /* SubLineChartView.swift in Sources */,
 				F6E826782BF643D300AEE7D9 /* AllTransactionsViewController.swift in Sources */,
 				F6E826662BEF41F900AEE7D9 /* HomeViewController.swift in Sources */,
 				F6328D052BEEEC6200BF0E40 /* SceneDelegate.swift in Sources */,
 				F6E826832BF6577200AEE7D9 /* UserDefaults.swift in Sources */,
 				F6E826702BF63FBE00AEE7D9 /* LastTransactionTableViewCell.swift in Sources */,
 				F6E826602BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift in Sources */,
-				F623EF3B2C32FBCF0044B83D /* SubChartView.swift in Sources */,
 				F623EF092C321A6D0044B83D /* CurrencyConverterViewController.swift in Sources */,
 				F6328D1A2BEEED4200BF0E40 /* LaunchViewController.swift in Sources */,
 				F6B1A6862BF74F8000A7D65C /* LanguagesExtension.swift in Sources */,
@@ -772,18 +766,21 @@
 				kind = branch;
 			};
 		};
+		F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F623EF352C32DFA90044B83D /* SnapKit */ = {
+		F6A500552C5639670019B21A /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F623EF342C32DFA90044B83D /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		F6A1BE742C34013D00D11A09 /* DGCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */;
-			productName = DGCharts;
+			package = F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 

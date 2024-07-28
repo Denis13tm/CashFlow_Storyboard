@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -20,10 +21,10 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
     let incomeL = "incomeL".localized()
     
     
-//    let animationView = AnimationView()
     let defaults = DefaultsOfUser()
     let coreDB = TransactionService.shared
     var allTransactions = [Transaction]()
+    let animationView = LottieAnimationView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,15 +62,14 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
         ui.layer.shadowRadius = 10
     }
     
-//    private func setupAnimation() {
-//        animationView.animation = Animation.named("data-scanning")
-//        animationView.frame = noTransactionsView.bounds
-//        animationView.contentMode = .scaleAspectFit
-//        animationView.loopMode = .loop
-//        animationView.play()
-//        noTransactionsView.addSubview(animationView)
-//
-//    }
+    private func setupAnimation() {
+        animationView.animation = .named("data-scanning")
+        animationView.frame = noTransactionsView.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.play()
+        noTransactionsView.addSubview(animationView)
+    }
     
     public func animatedTableView() {
         table_View.reloadData()
@@ -102,7 +102,7 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
         if allTransactions.count == 0 {
             table_View.isHidden = true
             noTransactionsView.isHidden = false
-//            setupAnimation()
+            setupAnimation()
         } else {
             table_View.isHidden = false
             noTransactionsView.isHidden = true

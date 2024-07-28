@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineChartViewController" customModule="CashFlow_Storyboard" customModuleProvider="target">
             <connections>
-                <outlet property="pieChart" destination="2Nl-gS-Cki" id="wJM-bb-Glh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,20 +19,19 @@
             <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nl-gS-Cki" customClass="PieChartView" customModule="Charts">
-                    <rect key="frame" x="16" y="241" width="398" height="450"/>
-                    <color key="backgroundColor" systemColor="systemGray5Color"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="450" id="KEB-NS-nvo"/>
-                    </constraints>
-                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page is under development and it will be come out soon !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6b-Z4-U96">
+                    <rect key="frame" x="16" y="454" width="398" height="49"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <color key="textColor" systemColor="systemTealColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2Nl-gS-Cki" secondAttribute="trailing" constant="16" id="B0a-UG-c6p"/>
-                <constraint firstItem="2Nl-gS-Cki" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ra1-ak-JJn"/>
-                <constraint firstItem="2Nl-gS-Cki" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="wMY-gc-tO5"/>
+                <constraint firstItem="o6b-Z4-U96" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Bwa-hg-Mee"/>
+                <constraint firstAttribute="trailing" secondItem="o6b-Z4-U96" secondAttribute="trailing" constant="16" id="Uij-zC-axJ"/>
+                <constraint firstItem="o6b-Z4-U96" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="u3p-aY-tsw"/>
             </constraints>
             <point key="canvasLocation" x="-121" y="-11"/>
         </view>
@@ -42,8 +40,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

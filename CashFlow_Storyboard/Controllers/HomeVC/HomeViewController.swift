@@ -11,6 +11,7 @@
 
 
 import UIKit
+import Lottie
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -71,6 +72,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let defaults1 = UserDefaults.standard
     let defaults = DefaultsOfUser()
     let coreDB = TransactionService.shared
+    let animationView = LottieAnimationView()
     
     var transactions: [Transaction] = []
     
@@ -305,13 +307,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     }
     
+    private func setupAnimation() {
+        animationView.animation = .named("data-scanning")
+        animationView.frame = noTransactionsView.bounds
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.play()
+        noTransactionsView.addSubview(animationView)
+    }
+    
+    
     //MARK: - Table View...
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if transactions.count == 0 {
             table_View.isHidden = true
             noTransactionsView.isHidden = false
-//            setupAnimation()
+            setupAnimation()
         } else {
             table_View.isHidden = false
             noTransactionsView.isHidden = true

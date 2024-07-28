@@ -118,8 +118,8 @@ class ChangeLanguageViewController: UIViewController {
         }
 
     @objc func uzbTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "UZB")
-        Bundle.setLanguage(lang: "uz")
+        defaults.saveLanguage(baseLanguage: "RU")
+        Bundle.setLanguage(lang: "ru")
         callHomeScreen()
     }
 

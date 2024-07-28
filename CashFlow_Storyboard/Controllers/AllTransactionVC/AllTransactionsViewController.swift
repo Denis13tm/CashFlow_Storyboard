@@ -19,10 +19,11 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
     let expenseL = "expenseL".localized()
     let incomeL = "incomeL".localized()
     
-    var allTransactions = [Transaction]()
+    
 //    let animationView = AnimationView()
     let defaults = DefaultsOfUser()
     let coreDB = TransactionService.shared
+    var allTransactions = [Transaction]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

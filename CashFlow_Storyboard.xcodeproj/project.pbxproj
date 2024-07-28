@@ -30,6 +30,9 @@
 		F6328D272BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D252BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib */; };
 		F6328D2A2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D282BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift */; };
 		F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */; };
+		F66D68E32C46EF4A00D16A7F /* SelectedTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */; };
+		F66D68E42C46EF4A00D16A7F /* SelectedTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */; };
+		F6A1BE752C34013D00D11A09 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = F6A1BE742C34013D00D11A09 /* DGCharts */; };
 		F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */; };
 		F6B1A67E2BF70E6900A7D65C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */; };
 		F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */; };
@@ -90,6 +93,8 @@
 		F6328D252BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetCurrentBalanceViewController.xib; sourceTree = "<group>"; };
 		F6328D282BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetBaseCurrencyViewController.swift; sourceTree = "<group>"; };
 		F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetBaseCurrencyViewController.xib; sourceTree = "<group>"; };
+		F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTransactionViewController.swift; sourceTree = "<group>"; };
+		F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedTransactionViewController.xib; sourceTree = "<group>"; };
 		F6B1A67B2BF70C6700A7D65C /* MainCoreDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainCoreDB.xcdatamodel; sourceTree = "<group>"; };
 		F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
@@ -123,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A1BE752C34013D00D11A09 /* DGCharts in Frameworks */,
 				F623EF362C32DFA90044B83D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +222,7 @@
 				F623EF062C321A0A0044B83D /* CurrencyConverterVC */,
 				F6E8265D2BEF3BF900AEE7D9 /* ChangeLanguageVC */,
 				F6E826752BF6439800AEE7D9 /* AllTransactionVC */,
+				F66D68E02C46EEFC00D16A7F /* SelectedTransactionVC */,
 				F6E826632BEF41D800AEE7D9 /* NewTransactionVC */,
 				F6E826622BEF41C000AEE7D9 /* HomeVC */,
 				F6B1A6982BF78D8500A7D65C /* OTPScreenVC */,
@@ -272,6 +279,15 @@
 				F6328D252BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib */,
 			);
 			path = SetCurrentBalanceVC;
+			sourceTree = "<group>";
+		};
+		F66D68E02C46EEFC00D16A7F /* SelectedTransactionVC */ = {
+			isa = PBXGroup;
+			children = (
+				F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */,
+				F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */,
+			);
+			path = SelectedTransactionVC;
 			sourceTree = "<group>";
 		};
 		F6B1A6982BF78D8500A7D65C /* OTPScreenVC */ = {
@@ -383,6 +399,7 @@
 			name = CashFlow_Storyboard;
 			packageProductDependencies = (
 				F623EF352C32DFA90044B83D /* SnapKit */,
+				F6A1BE742C34013D00D11A09 /* DGCharts */,
 			);
 			productName = CashFlow_Storyboard;
 			productReference = F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */;
@@ -416,6 +433,7 @@
 			mainGroup = F6328CF62BEEEC6200BF0E40;
 			packageReferences = (
 				F623EF342C32DFA90044B83D /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = F6328D002BEEEC6200BF0E40 /* Products */;
 			projectDirPath = "";
@@ -448,6 +466,7 @@
 				F6E826712BF63FBE00AEE7D9 /* LastTransactionTableViewCell.xib in Resources */,
 				F6328D272BEF0D4100BF0E40 /* SetCurrentBalanceViewController.xib in Resources */,
 				F6328D1B2BEEED4300BF0E40 /* LaunchViewController.xib in Resources */,
+				F66D68E42C46EF4A00D16A7F /* SelectedTransactionViewController.xib in Resources */,
 				F6E8266B2BF6222100AEE7D9 /* NewTransactionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +488,7 @@
 				F6328D1F2BEF023D00BF0E40 /* SetLanguageViewController.swift in Sources */,
 				F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */,
 				F623EF202C32A9F60044B83D /* LineChartViewController.swift in Sources */,
+				F66D68E32C46EF4A00D16A7F /* SelectedTransactionViewController.swift in Sources */,
 				F623EF0F2C32203E0044B83D /* ExchangeRates.swift in Sources */,
 				F6E8266A2BF6222100AEE7D9 /* NewTransactionViewController.swift in Sources */,
 				F6328D2A2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.swift in Sources */,
@@ -650,15 +670,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CashFlow_Storyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,6 +686,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "NotYet.CashFlow-Storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -685,15 +707,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CashFlow_Storyboard/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cash Flow";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = "";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -702,6 +723,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "NotYet.CashFlow-Storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -740,6 +764,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ChartsOrg/Charts.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -747,6 +779,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F623EF342C32DFA90044B83D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		F6A1BE742C34013D00D11A09 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -241,7 +241,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="50"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                                    <state key="normal" title="Expecting Profit">
+                                                                    <state key="normal" title="Profits">
                                                                         <color key="titleColor" red="0.031156491450000001" green="0.73474691459999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
                                                                     <connections>
@@ -303,7 +303,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="50"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                                    <state key="normal" title="Expecting Cost">
+                                                                    <state key="normal" title="Costs">
                                                                         <color key="titleColor" red="0.031156491450000001" green="0.73474691459999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     </state>
                                                                     <connections>

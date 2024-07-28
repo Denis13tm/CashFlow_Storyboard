@@ -1,8 +1,8 @@
-//
+
 //  LaunchViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev on 11/05/2024.
+//  Created by Otabek Tuychiev
 //
 
 import UIKit
@@ -48,6 +48,7 @@ class LaunchViewController: UIViewController {
                            } else {
                                callSetOTPScreen()
                            }
+//                           callHomeScreen()
                        } else {
                            callCurrentBalanceScreen()
                        }
@@ -63,6 +64,13 @@ class LaunchViewController: UIViewController {
    }
     
     
+    private func callHomeScreen() {
+        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+        nv.modalPresentationStyle = .fullScreen
+//        self.present(nv, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     private func callOTPScreen() {
         let vc = OTPScreenViewController(nibName: "OTPScreenViewController", bundle: nil)
         self.navigationController?.navigationBar.isHidden = true

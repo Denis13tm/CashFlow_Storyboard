@@ -209,7 +209,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         rightBtnBackgroundView.layer.cornerRadius = 13.0
         centerBtnBackgroundView.layer.cornerRadius = 13.0
         leftBtnBackgroundView.layer.cornerRadius = 13.0
-        
     }
     
     private func addNavigationbar() {
@@ -359,22 +358,21 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let lastTransaction = transactions[indexPath.row]
-//
-//        let vc = self.storyboard?.instantiateViewController(identifier: "SelectedTransaction_VC") as! SelectedTransaction_ViewController
-//
-//        vc.selectedTransacion = lastTransaction
-//        vc.amount = lastTransaction.amount
-//        vc.categoryImg = lastTransaction.icon
-//        vc.category_Label = lastTransaction.category
-//        vc.type = lastTransaction.type
-//        vc.date = lastTransaction.date
-//        vc.note = lastTransaction.notes
-//
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let lastTransaction = transactions[indexPath.row]
+        
+        let vc = SelectedTransactionViewController(nibName: "SelectedTransactionViewController", bundle: nil)
+        let nv = UINavigationController(rootViewController: vc)
+
+        vc.selectedTransacion = lastTransaction
+        vc.amount = lastTransaction.amount
+        vc.type = lastTransaction.type
+        vc.date = lastTransaction.date
+        vc.note = lastTransaction.notes
+        
+        nv.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete

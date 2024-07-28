@@ -5,30 +5,35 @@
 //  Created by Otabek Tuychiev.
 //
 
-//import SwiftUI
-//import Charts
-//
-//struct SubChartView: View {
-//
-//    var data: [Transaction]
-//
-//        var body: some View {
-////            Chart {
-////                ForEach(data) { item in
-////                    SectorMark(
-////                        angle: .value("Value", item.value),
-////                        angularOffset: .degrees(0)
-////                    )
-////                    .foregroundStyle(by: .value("Category", item.category))
-////                }
-////            }
-////            .chartStyle(PieChartStyle())
-////            .padding()
-//        }
-//}
+import SwiftUI
+import Charts
 
-//struct SubChartView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SubChartView(data: Transaction())
-//    }
-//}
+struct SubChartView: View {
+
+    var allTransactions = [Transaction]()
+    
+        var body: some View {
+            if #available(iOS 16.0, *) {
+                Chart {
+                    ForEach(allTransactions) { item in
+                        BarMark(
+                            x: .value("Value", item.amount ?? "0"),
+                            y: .value("Month", item.date ?? "0")
+                        )
+                        
+                    }
+                }
+                .aspectRatio(contentMode: .fit)
+                .padding()
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+}
+
+
+struct SubChartView_Previews: PreviewProvider {
+    static var previews: some View {
+        SubChartView()
+    }
+}

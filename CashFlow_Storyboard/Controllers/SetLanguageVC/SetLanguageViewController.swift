@@ -2,7 +2,7 @@
 //  SetLanguageViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev on 11/05/2024.
+//  Created by Otabek Tuychiev
 //
 
 import UIKit
@@ -37,7 +37,13 @@ class SetLanguageViewController: UIViewController {
         initViews()
     }
 
-
+    // MARK: - Actions
+    
+    @IBAction func nextBtn_Action(_ sender: Any) {
+        defaults.saveLanguage(baseLanguage: baseLanguage_.text!)
+        callBaseCurrencyScreen()
+    }
+    
     // MARK: - Methods
     
     private func initViews() {
@@ -53,11 +59,6 @@ class SetLanguageViewController: UIViewController {
         baseLanguage_.layer.cornerRadius = 13.0
         nextBtn_BV.layer.cornerRadius = 18.0
         modifierUI(ui: nextBtn_BV)
-    }
-    
-    @IBAction func nextBtn_Action(_ sender: Any) {
-        defaults.saveLanguage(baseLanguage: baseLanguage_.text!)
-        callBaseCurrencyScreen()
     }
     
     private func callBaseCurrencyScreen() {

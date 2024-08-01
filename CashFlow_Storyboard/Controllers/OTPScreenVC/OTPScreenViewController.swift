@@ -20,6 +20,7 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.hideKeyboardWhenTappedAround()
         initViews()
         warningLabel.isHidden = true
     }

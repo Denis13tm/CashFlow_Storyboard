@@ -29,8 +29,16 @@ class SetCurrentBalanceViewController: UIViewController {
         initViews()
     }
 
+    //MARK: - Actions
 
-    //MARK: - Methods...
+    @IBAction func NextBtn_Action(_ sender: Any) {
+        defaults.saveCashBalance(balance: cashBalance.text!)
+        defaults.saveIncome(income: "0")
+        defaults.saveExpense(expense: "0")
+        callSetOTPScreen()
+    }
+    
+    //MARK: - Methods
     
     private func initViews() {
         setLangValue()
@@ -57,13 +65,6 @@ class SetCurrentBalanceViewController: UIViewController {
         let vc = SetPasscodeViewController(nibName: "SetPasscodeViewController", bundle: nil)
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-
-    @IBAction func NextBtn_Action(_ sender: Any) {
-        defaults.saveCashBalance(balance: cashBalance.text!)
-        defaults.saveIncome(income: "0")
-        defaults.saveExpense(expense: "0")
-        callSetOTPScreen()
     }
     
 //End.

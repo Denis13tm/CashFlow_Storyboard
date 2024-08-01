@@ -2,7 +2,7 @@
 //  SetBaseCurrencyViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev on 11/05/2024.
+//  Created by Otabek Tuychiev
 //
 
 import UIKit
@@ -40,6 +40,13 @@ class SetBaseCurrencyViewController: UIViewController {
         initViews()
     }
 
+    //MARK: - Actions
+
+    @IBAction func nextBtn_Action(_ sender: Any) {
+        defaults.saveCurrency(baseCurrency: baseCurrency_.text!)
+        callCurrentBalanceScreen()
+    }
+   
     //MARK: - Methods...
     
     func initViews() {
@@ -130,11 +137,5 @@ class SetBaseCurrencyViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
-    @IBAction func nextBtn_Action(_ sender: Any) {
-        defaults.saveCurrency(baseCurrency: baseCurrency_.text!)
-        callCurrentBalanceScreen()
-    }
-   
 
 }

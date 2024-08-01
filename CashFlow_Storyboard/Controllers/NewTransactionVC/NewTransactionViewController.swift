@@ -154,7 +154,7 @@ class NewTransactionViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func callHomeScreen() {
+    private func callHomeScreen() {
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
         nv.modalPresentationStyle = .fullScreen
@@ -162,14 +162,14 @@ class NewTransactionViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func modifierUI(ui: UIView) {
+    private func modifierUI(ui: UIView) {
         ui.layer.shadowColor = UIColor.black.cgColor
         ui.layer.shadowOpacity = 0.5
         ui.layer.shadowOffset = .zero
         ui.layer.shadowRadius = 5.0
     }
     
-    func setLangValue() {
+    private func setLangValue() {
         currencyLabel.text = defaults.getCurrency()
         
         type_label.text = type

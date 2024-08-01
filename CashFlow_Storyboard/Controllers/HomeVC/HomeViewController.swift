@@ -115,46 +115,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         callLineChartScreen()
     }
     
-    //...Set up selectedbutton background view
-    func setSelectedProfitBtn() {
-        exp_profit_BViewImage.image = UIImage(named: "gradiantBV")
-        transactions_BViewImage.image = UIImage(named: "")
-        exp_cost_BViewImage.image = UIImage(named: "")
-        
-        exp_profit_Btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        exp_cost_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
-        transactions_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
-        
-        transactions = coreDB.fetchIncomeTransactions()
-        table_View.reloadData()
-    }
-    func setSelectedTransactionBtn() {
-        exp_profit_BViewImage.image = UIImage(named: "")
-        transactions_BViewImage.image = UIImage(named: "gradiantBV")
-        exp_cost_BViewImage.image = UIImage(named: "")
-        
-        transactions_Btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        exp_cost_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
-        exp_profit_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
-        
-        transactions = TransactionService.shared.fetchTransactions()
-        table_View.reloadData()
-    }
-    func setSelectedCostBtn() {
-        exp_profit_BViewImage.image = UIImage(named: "")
-        transactions_BViewImage.image = UIImage(named: "")
-        exp_cost_BViewImage.image = UIImage(named: "gradiantBV")
-        
-        exp_cost_Btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        transactions_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
-        exp_profit_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
-        
-        transactions = coreDB.fetchExpenseTransactions()
-        table_View.reloadData()
-    }
-
-
-
     // MARK: - Methods
     
     private func initviews() {
@@ -239,6 +199,44 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         callProfileScreen()
     }
     
+    //...Set up the selected button background view
+    func setSelectedProfitBtn() {
+        exp_profit_BViewImage.image = UIImage(named: "gradiantBV")
+        transactions_BViewImage.image = UIImage(named: "")
+        exp_cost_BViewImage.image = UIImage(named: "")
+        
+        exp_profit_Btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        exp_cost_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
+        transactions_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
+        
+        transactions = coreDB.fetchIncomeTransactions()
+        table_View.reloadData()
+    }
+    func setSelectedTransactionBtn() {
+        exp_profit_BViewImage.image = UIImage(named: "")
+        transactions_BViewImage.image = UIImage(named: "gradiantBV")
+        exp_cost_BViewImage.image = UIImage(named: "")
+        
+        transactions_Btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        exp_cost_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
+        exp_profit_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
+        
+        transactions = TransactionService.shared.fetchTransactions()
+        table_View.reloadData()
+    }
+    func setSelectedCostBtn() {
+        exp_profit_BViewImage.image = UIImage(named: "")
+        transactions_BViewImage.image = UIImage(named: "")
+        exp_cost_BViewImage.image = UIImage(named: "gradiantBV")
+        
+        exp_cost_Btn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        transactions_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
+        exp_profit_Btn.setTitleColor(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), for: .normal)
+        
+        transactions = coreDB.fetchExpenseTransactions()
+        table_View.reloadData()
+    }
+    
   
     func callHomeScreen() {
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
@@ -317,7 +315,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    //MARK: - Table View...
+    //MARK: - Table View Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if transactions.count == 0 {
@@ -440,47 +438,3 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 //End.
 }
-
-
-
-extension Formatter {
-    static let number = NumberFormatter()
-}
-extension Locale {
-    static let englishUS: Locale = .init(identifier: "en_US")
-    static let koreaKR: Locale = .init(identifier: "ko_KR")
-    static let uzbek: Locale = .init(identifier: "uz_Latn_UZ")
-    static let russianRU: Locale = .init(identifier: "ru_RU")
-    // ... and so on
-}
-extension Numeric {
-    func formatted(with groupingSeparator: String? = nil, style: NumberFormatter.Style, locale: Locale = .current) -> String {
-        Formatter.number.locale = locale
-        Formatter.number.numberStyle = style
-        if let groupingSeparator = groupingSeparator {
-            Formatter.number.groupingSeparator = groupingSeparator
-        }
-        return Formatter.number.string(for: self) ?? ""
-    }
-    // Localized
-    var currency:   String { formatted(style: .currency) }
-    // Fixed locales
-    var currencyUS: String { formatted(style: .currency, locale: .englishUS) }
-    var currencyKR: String { formatted(style: .currency, locale: .koreaKR) }
-    var currencyUZ: String { formatted(style: .currency, locale: .uzbek) }
-    var currencyRU: String { formatted(style: .currency, locale: .russianRU) }
-
-}
-
-extension Formatter {
-    static let withSeparator: NumberFormatter = {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-        formatter.groupingSeparator = ","
-        return formatter
-    }()
-}
-extension Numeric {
-    var formattedWithSeparator: String { Formatter.withSeparator.string(for: self) ?? "" }
-}
-

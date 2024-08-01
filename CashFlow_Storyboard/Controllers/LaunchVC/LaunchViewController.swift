@@ -18,8 +18,6 @@ class LaunchViewController: UIViewController {
         super.viewDidLoad()
         initViews()
     }
-
-
  
     // MARK: - Methods...
     
@@ -48,7 +46,6 @@ class LaunchViewController: UIViewController {
                            } else {
                                callSetOTPScreen()
                            }
-//                           callHomeScreen()
                        } else {
                            callCurrentBalanceScreen()
                        }
@@ -98,16 +95,4 @@ class LaunchViewController: UIViewController {
     }
 
 //End.
-}
-
-// Put this piece of code anywhere you like to hide default keyboard
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }

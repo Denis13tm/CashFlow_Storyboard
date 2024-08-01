@@ -31,6 +31,7 @@
 		F66D68E42C46EF4A00D16A7F /* SelectedTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */; };
 		F6A500562C5639670019B21A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F6A500552C5639670019B21A /* Lottie */; };
 		F6A5005B2C563DB90019B21A /* data-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = F6A5005A2C563DB90019B21A /* data-scanning.json */; };
+		F6A5005F2C5646B00019B21A /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A5005E2C5646B00019B21A /* HelperExtensions.swift */; };
 		F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */; };
 		F6B1A67E2BF70E6900A7D65C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */; };
 		F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */; };
@@ -92,6 +93,7 @@
 		F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedTransactionViewController.swift; sourceTree = "<group>"; };
 		F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedTransactionViewController.xib; sourceTree = "<group>"; };
 		F6A5005A2C563DB90019B21A /* data-scanning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "data-scanning.json"; sourceTree = "<group>"; };
+		F6A5005E2C5646B00019B21A /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		F6B1A67B2BF70C6700A7D65C /* MainCoreDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainCoreDB.xcdatamodel; sourceTree = "<group>"; };
 		F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
@@ -284,6 +286,14 @@
 			path = "jsonfiles animation";
 			sourceTree = "<group>";
 		};
+		F6A500602C56477B0019B21A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F6B1A68B2BF756B900A7D65C /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		F6B1A6982BF78D8500A7D65C /* OTPScreenVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,12 +368,13 @@
 		F6E8267F2BF656FD00AEE7D9 /* Assistant Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6A500602C56477B0019B21A /* Localization */,
 				F6A500592C563D840019B21A /* jsonfiles animation */,
 				F6E826822BF6577200AEE7D9 /* UserDefaults.swift */,
 				F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */,
 				F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */,
 				F6B1A6852BF74F8000A7D65C /* LanguagesExtension.swift */,
-				F6B1A68B2BF756B900A7D65C /* Localizable.strings */,
+				F6A5005E2C5646B00019B21A /* HelperExtensions.swift */,
 			);
 			path = "Assistant Files";
 			sourceTree = "<group>";
@@ -426,8 +437,6 @@
 			);
 			mainGroup = F6328CF62BEEEC6200BF0E40;
 			packageReferences = (
-				F623EF342C32DFA90044B83D /* XCRemoteSwiftPackageReference "SnapKit" */,
-				F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */,
 				F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = F6328D002BEEEC6200BF0E40 /* Products */;
@@ -475,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6B1A69B2BF78DE600A7D65C /* OTPScreenViewController.swift in Sources */,
+				F6A5005F2C5646B00019B21A /* HelperExtensions.swift in Sources */,
 				F6E8265B2BEF368100AEE7D9 /* SetPasscodeViewController.swift in Sources */,
 				F6328D032BEEEC6200BF0E40 /* AppDelegate.swift in Sources */,
 				F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */,
@@ -750,22 +760,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F623EF342C32DFA90044B83D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-		F6A1BE732C34013D00D11A09 /* XCRemoteSwiftPackageReference "Charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ChartsOrg/Charts.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";

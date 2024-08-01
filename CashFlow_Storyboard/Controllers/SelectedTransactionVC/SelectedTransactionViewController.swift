@@ -104,7 +104,5 @@ class SelectedTransactionViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
-    
 
 }

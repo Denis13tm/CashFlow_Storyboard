@@ -2,7 +2,7 @@
 //  SelectedTransactionViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit
@@ -53,7 +53,7 @@ class SelectedTransactionViewController: UIViewController {
     }
 
 
-    // MARK: - Actions
+    // MARK: - Methods
     
     private func initViews() {
         setLangValue()

@@ -11,6 +11,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OTPScreenViewController" customModule="CashFlow_Storyboard" customModuleProvider="target">
             <connections>
+                <outlet property="btn0_BV" destination="cbq-KX-IdV" id="PGO-Eg-qdJ"/>
+                <outlet property="btn1_BV" destination="E8c-9X-UQQ" id="f6V-uH-Pit"/>
+                <outlet property="btn2_BV" destination="Ifs-7p-ej5" id="LGo-57-rH6"/>
+                <outlet property="btn3_BV" destination="tHd-f2-tcq" id="AnS-m3-hHW"/>
+                <outlet property="btn4_BV" destination="18Q-QU-Egx" id="2EK-BY-NvY"/>
+                <outlet property="btn5_BV" destination="WUz-zd-Axm" id="yer-qB-xIk"/>
+                <outlet property="btn6_BV" destination="8wO-Lo-wWb" id="x1C-5l-sRB"/>
+                <outlet property="btn7_BV" destination="KYW-mR-1Ue" id="2wR-jU-ABL"/>
+                <outlet property="btn8_BV" destination="eU7-LP-Cf9" id="nld-J2-1xC"/>
+                <outlet property="btn9_BV" destination="Uil-4i-Ykl" id="Fyf-5G-ZJx"/>
                 <outlet property="tf1" destination="L91-Qe-Yyk" id="dVY-Oi-hYD"/>
                 <outlet property="tf2" destination="aDN-Dk-pNm" id="KYE-kO-Bkh"/>
                 <outlet property="tf3" destination="arh-gd-rgt" id="upR-Y7-Kug"/>

@@ -2,7 +2,7 @@
 //  SetCurrentBalanceViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 
 import UIKit
 

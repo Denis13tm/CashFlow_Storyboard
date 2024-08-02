@@ -38,7 +38,7 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
 
     // MARK: - Methods
     
-    func initMethods() {
+    private func initMethods() {
         addNavBar()
         allTransactions = coreDB.fetchTransactions()
         noTranLabel.text = noTran

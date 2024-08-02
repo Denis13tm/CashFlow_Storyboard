@@ -117,7 +117,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="zIl-Zd-QHe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aUM-6g-1yn"/>
                 <constraint firstItem="zIl-Zd-QHe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gdN-2N-Tel"/>

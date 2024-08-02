@@ -2,7 +2,7 @@
 //  SetPasscodeViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev on 11/05/2024.
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit
@@ -36,11 +36,16 @@ class SetPasscodeViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         initViews()
     }
-
-   
+    
+    // MARK: - Actions
+    
+    @IBAction func nextBtnAction(_ sender: Any) {
+        saveAndcallOTPScreen()
+    }
+    
     // MARK: - Methods
     
-    func initViews() {
+    private func initViews() {
         setLangValue()
         
         nextBtn_Action.layer.cornerRadius = 18.0
@@ -50,14 +55,14 @@ class SetPasscodeViewController: UIViewController {
         setUp_texField()
     }
     
-    func modifierUI(ui: UIView) {
+    private func modifierUI(ui: UIView) {
         ui.layer.shadowColor = UIColor.black.cgColor
         ui.layer.shadowOpacity = 0.5
         ui.layer.shadowOffset = .zero
         ui.layer.shadowRadius = 10
     }
     
-    func setLangValue() {
+    private func setLangValue() {
         title_label.text = title3
         description_label.text = description3
         headline_label.text = headline
@@ -68,7 +73,7 @@ class SetPasscodeViewController: UIViewController {
         confirmedPasscode.placeholder = digits
     }
     
-    func setUp_texField() {
+    private func setUp_texField() {
         self.newPasscode.delegate = self
         self.confirmedPasscode.delegate = self
     
@@ -78,10 +83,6 @@ class SetPasscodeViewController: UIViewController {
     
     @objc func changeCharacter() {
         warningLabel.isHidden = true
-    }
-    
-    @IBAction func nextBtnAction(_ sender: Any) {
-        saveAndcallOTPScreen()
     }
     
     private func callOTPScreen() {

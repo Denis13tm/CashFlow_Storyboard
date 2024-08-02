@@ -2,7 +2,7 @@
 //  ProfileViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit
@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         self.hideKeyboardWhenTappedAround()
     }
 
-    //MARK: - Methods...
+    //MARK: - Methods
     
     func initViews() {
         setLangValue()

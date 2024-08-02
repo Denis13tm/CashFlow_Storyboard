@@ -19,15 +19,15 @@ class LaunchViewController: UIViewController {
         initViews()
     }
  
-    // MARK: - Methods...
+    // MARK: - Methods
     
-    func initViews() {
+    private func initViews() {
         launchingLabel.text = launching
 
         getPermissonOfNC()
     }
     
-    func getPermissonOfNC() {
+    private func getPermissonOfNC() {
        let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { [self] (granted, error)in
            

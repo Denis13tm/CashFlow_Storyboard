@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 //
 // BV = Background View
 // ic = Icon

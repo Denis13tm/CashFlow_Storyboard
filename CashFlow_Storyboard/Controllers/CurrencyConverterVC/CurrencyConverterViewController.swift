@@ -2,7 +2,7 @@
 //  CurrencyConverterViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit
@@ -37,7 +37,13 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
         self.hideKeyboardWhenTappedAround()
     }
 
-    // MARK: - Methods...
+    // MARK: - Actions
+   
+    @IBAction func backBtn_Action(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Methods
     
     private func initViews() {
         
@@ -63,9 +69,6 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
         ui.layer.shadowOpacity = 0.5
         ui.layer.shadowOffset = .zero
         ui.layer.shadowRadius = 5.0
-    }
-    @IBAction func backBtn_Action(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     @objc func updateViews(input: Double) {
@@ -98,7 +101,7 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     
-    func fetchJSON() {
+    private func fetchJSON() {
         guard let url = URL(string: "https://open.exchangerate-api.com/v6/latest") else { return }
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in

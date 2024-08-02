@@ -2,7 +2,7 @@
 //  OTPScreenViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit
@@ -16,11 +16,20 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tf3: UITextField!
     @IBOutlet weak var tf4: UITextField!
     
+    @IBOutlet weak var btn1_BV: UIView!
+    @IBOutlet weak var btn2_BV: UIView!
+    @IBOutlet weak var btn3_BV: UIView!
+    @IBOutlet weak var btn4_BV: UIView!
+    @IBOutlet weak var btn5_BV: UIView!
+    @IBOutlet weak var btn6_BV: UIView!
+    @IBOutlet weak var btn7_BV: UIView!
+    @IBOutlet weak var btn8_BV: UIView!
+    @IBOutlet weak var btn9_BV: UIView!
+    @IBOutlet weak var btn0_BV: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hideKeyboardWhenTappedAround()
         initViews()
         warningLabel.isHidden = true
     }
@@ -44,6 +53,17 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Helper Methods
     
     private func initViews() {
+        btn1_BV.layer.cornerRadius = 12.0
+        btn2_BV.layer.cornerRadius = 12.0
+        btn3_BV.layer.cornerRadius = 12.0
+        btn4_BV.layer.cornerRadius = 12.0
+        btn5_BV.layer.cornerRadius = 12.0
+        btn6_BV.layer.cornerRadius = 12.0
+        btn7_BV.layer.cornerRadius = 12.0
+        btn8_BV.layer.cornerRadius = 12.0
+        btn9_BV.layer.cornerRadius = 12.0
+        btn0_BV.layer.cornerRadius = 12.0
+        
         tf1.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         tf2.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         tf3.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
@@ -82,8 +102,7 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
                 showWarning(message: "OTP matched!", isError: false)
                 callHomeScreen()
             } else {
-                showWarning(message: "OTP did not match.", isError: true)
-                print("PW: \(storedPasscode)")
+                showWarning(message: "Wrong passcode. Please try again !", isError: true)
             }
         }
     

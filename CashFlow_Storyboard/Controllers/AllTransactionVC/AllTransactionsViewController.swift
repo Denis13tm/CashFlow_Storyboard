@@ -2,7 +2,7 @@
 //  AllTransactionsViewController.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev on 16/05/2024.
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit
@@ -114,28 +114,25 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
         let cell = Bundle.main.loadNibNamed("LastTransactionTableViewCell", owner: self, options: nil)?.first as! LastTransactionTableViewCell
         let lastTransaction = allTransactions[indexPath.row]
         
-        if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Income ▼" {
+        if defaults.getCurrency() == "USD" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyUS
-        } else if lastTransaction.type == "경비 ▼" || lastTransaction.type == "수입 ▼" {
+        } else if defaults.getCurrency() == "WON" || defaults.getCurrency() == "원" || defaults.getCurrency() == "вон" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyKR
-        } else if lastTransaction.type == "Chiqim ▼" || lastTransaction.type == "Kirim ▼" {
+        } else if defaults.getCurrency() == "SUM" || defaults.getCurrency() == "сум" {
             cell.amout.text = Double(lastTransaction.amount ?? "0.0")?.currencyUZ
         }
         
-        if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Chiqim ▼" || lastTransaction.type == "경비 ▼" {
+        if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Расход ▼" || lastTransaction.type == "경비 ▼" {
             cell.amout.textColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
         } else {
             cell.amout.textColor = #colorLiteral(red: 0.4696043647, green: 0.8248788522, blue: 0.006127688114, alpha: 1)
         }
+        
         cell.notes.text = lastTransaction.notes
         cell.date.text = lastTransaction.date
         
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {

@@ -51,7 +51,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Te2-4C-MbV">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te2-4C-MbV">
                     <rect key="frame" x="0.0" y="59" width="393" height="703"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hTG-0T-4bA">
@@ -121,7 +121,7 @@
                                                                                             <rect key="frame" x="0.0" y="69" width="222" height="69"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlB-cU-JmO">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="74" height="69"/>
+                                                                                                    <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="69"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="width" constant="60" id="0On-MQ-h8s"/>
                                                                                                     </constraints>
@@ -130,7 +130,7 @@
                                                                                                     <nil key="highlightedColor"/>
                                                                                                 </label>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99,999,000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX9-wZ-6tW">
-                                                                                                    <rect key="frame" x="74" y="0.0" width="148" height="69"/>
+                                                                                                    <rect key="frame" x="47.333333333333329" y="0.0" width="174.66666666666669" height="69"/>
                                                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <nil key="highlightedColor"/>

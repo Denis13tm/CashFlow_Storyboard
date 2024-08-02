@@ -76,10 +76,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var transactions: [Transaction] = []
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
         initviews()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -355,7 +353,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
 
 
-        if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Chiqim ▼" || lastTransaction.type == "경비 ▼" {
+        if lastTransaction.type == "Expense ▼" || lastTransaction.type == "Расход ▼" || lastTransaction.type == "경비 ▼" {
             cell.amout.textColor = #colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)
         } else {
             cell.amout.textColor = #colorLiteral(red: 0.4696043647, green: 0.8248788522, blue: 0.006127688114, alpha: 1)

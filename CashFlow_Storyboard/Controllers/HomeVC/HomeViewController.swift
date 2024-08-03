@@ -54,7 +54,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var leftBtnBackgroundView: UIView!
     
     
-    @IBOutlet var noTransactionsView: UIView!
+    @IBOutlet weak var noTransactionsView: UIView!
+    @IBOutlet weak var lastTrnsTableView_BV: UIStackView!
     
     var total_Balance = "totalBalance".localized()
     var income = "income".localized()
@@ -109,13 +110,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         callCurrencyConverterScreen()
     }
     
-    @IBAction func callLineChartScreenBtn_Action(_ sender: Any) {
-        callLineChartScreen()
+    @IBAction func callProfileViewBtn_Action(_ sender: Any) {
+        callProfileScreen()
     }
     
     // MARK: - Methods
     
     private func initviews() {
+        identifyUIDevice()
         addNavigationbar()
         getModifiedViews()
         setLangValue()
@@ -125,6 +127,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         transactions = coreDB.fetchTransactions()
         table_View.reloadData()
+    }
+    
+    private func identifyUIDevice() {
+        lastTrnsTableView_BV.translatesAutoresizingMaskIntoConstraints = false
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            NSLayoutConstraint.activate([
+                lastTrnsTableView_BV.heightAnchor.constraint(equalToConstant: 450)
+            ])
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            NSLayoutConstraint.activate([
+                lastTrnsTableView_BV.heightAnchor.constraint(equalToConstant: 900)
+            ])
+        }
     }
     
     private func setLangValue() {
@@ -177,24 +192,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         titleLabel.text = "Cash Flow"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         
-        let rightNavBtn1 = UIImage(systemName: "globe.asia.australia")
-        let rightNavBtn = UIImage(systemName: "slider.horizontal.3")
+        let rightNavBtn = UIImage(systemName: "globe.asia.australia")
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
-        self.navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(image: rightNavBtn, style: .plain, target: self, action: #selector(rightNavBarBtn)),
-            UIBarButtonItem(image: rightNavBtn1, style: .plain, target: self, action: #selector(rightNavBarBtn1))]
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: rightNavBtn, style: .plain, target: self, action: #selector(rightNavBarBtn))
     }
     
     @objc private func leftNavBarBtn() {
         callAddNewTrnScreen()
     }
     
-    @objc private func rightNavBarBtn1() {
-        callChangeLanguageScreen()
-    }
     @objc private func rightNavBarBtn() {
-        callProfileScreen()
+        callChangeLanguageScreen()
     }
     
     //...Set up the selected button background view
@@ -263,17 +272,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func callChangeLanguageScreen() {
         let vc = ChangeLanguageViewController(nibName: "ChangeLanguageViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
-        nv.modalPresentationStyle = .fullScreen
+//        nv.modalPresentationStyle = .fullScreen
         self.present(nv, animated: true, completion: nil)
     }
     func callProfileScreen() {
         let vc = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        let nv = UINavigationController(rootViewController: vc)
-        nv.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    func callLineChartScreen() {
-        let vc = LineChartViewController(nibName: "LineChartViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
         nv.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(vc, animated: true)

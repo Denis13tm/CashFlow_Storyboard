@@ -12,8 +12,6 @@
 		F623EF0F2C32203E0044B83D /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF0E2C32203E0044B83D /* ExchangeRates.swift */; };
 		F623EF1B2C3296F90044B83D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF192C3296F80044B83D /* ProfileViewController.swift */; };
 		F623EF1C2C3296F90044B83D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF1A2C3296F90044B83D /* ProfileViewController.xib */; };
-		F623EF202C32A9F60044B83D /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */; };
-		F623EF212C32A9F60044B83D /* LineChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */; };
 		F6328D032BEEEC6200BF0E40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */; };
 		F6328D052BEEEC6200BF0E40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */; };
 		F6328D0A2BEEEC6200BF0E40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6328D082BEEEC6200BF0E40 /* Main.storyboard */; };
@@ -73,8 +71,6 @@
 		F623EF0E2C32203E0044B83D /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
 		F623EF192C3296F80044B83D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F623EF1A2C3296F90044B83D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
-		F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
-		F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartViewController.xib; sourceTree = "<group>"; };
 		F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashFlow_Storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6328D022BEEEC6200BF0E40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6328D042BEEEC6200BF0E40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,15 +156,6 @@
 			path = ProfileVC;
 			sourceTree = "<group>";
 		};
-		F623EF1D2C32A9B20044B83D /* LineChartVC */ = {
-			isa = PBXGroup;
-			children = (
-				F623EF1E2C32A9F60044B83D /* LineChartViewController.swift */,
-				F623EF1F2C32A9F60044B83D /* LineChartViewController.xib */,
-			);
-			path = LineChartVC;
-			sourceTree = "<group>";
-		};
 		F6328CF62BEEEC6200BF0E40 = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +192,6 @@
 		F6328D162BEEECB000BF0E40 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F623EF1D2C32A9B20044B83D /* LineChartVC */,
 				F623EF182C3296680044B83D /* ProfileVC */,
 				F623EF062C321A0A0044B83D /* CurrencyConverterVC */,
 				F6E8265D2BEF3BF900AEE7D9 /* ChangeLanguageVC */,
@@ -458,7 +444,6 @@
 				F6328D0C2BEEEC6800BF0E40 /* Assets.xcassets in Resources */,
 				F6E826792BF643D300AEE7D9 /* AllTransactionsViewController.xib in Resources */,
 				F6B1A6892BF756B900A7D65C /* Localizable.strings in Resources */,
-				F623EF212C32A9F60044B83D /* LineChartViewController.xib in Resources */,
 				F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */,
 				F6E826612BEF3CB500AEE7D9 /* ChangeLanguageViewController.xib in Resources */,
 				F623EF0A2C321A6D0044B83D /* CurrencyConverterViewController.xib in Resources */,
@@ -493,7 +478,6 @@
 				F623EF1B2C3296F90044B83D /* ProfileViewController.swift in Sources */,
 				F6328D1F2BEF023D00BF0E40 /* SetLanguageViewController.swift in Sources */,
 				F6B1A6802BF713DD00A7D65C /* TransactionService.swift in Sources */,
-				F623EF202C32A9F60044B83D /* LineChartViewController.swift in Sources */,
 				F66D68E32C46EF4A00D16A7F /* SelectedTransactionViewController.swift in Sources */,
 				F623EF0F2C32203E0044B83D /* ExchangeRates.swift in Sources */,
 				F6E8266A2BF6222100AEE7D9 /* NewTransactionViewController.swift in Sources */,

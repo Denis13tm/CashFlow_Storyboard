@@ -11,9 +11,10 @@ import Lottie
 class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    @IBOutlet var noTransactionsView: UIView!
-    @IBOutlet var table_View: UITableView!
-    @IBOutlet var noTranLabel: UILabel!
+    @IBOutlet weak var noTransactionsView: UIView!
+    @IBOutlet weak var table_View: UITableView!
+    @IBOutlet weak var noTranLabel: UILabel!
+    @IBOutlet weak var noTrnsViewAnimatio_BV: UIStackView!
     
     let title7 = "title7".localized()
     let noTran = "noTran".localized()
@@ -39,11 +40,25 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
     // MARK: - Methods
     
     private func initMethods() {
+        identifyUIDevice()
         addNavBar()
         allTransactions = coreDB.fetchTransactions()
         noTranLabel.text = noTran
         table_View.dataSource = self
         table_View.delegate = self
+    }
+    
+    private func identifyUIDevice() {
+        noTrnsViewAnimatio_BV.translatesAutoresizingMaskIntoConstraints = false
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            NSLayoutConstraint.activate([
+                noTrnsViewAnimatio_BV.heightAnchor.constraint(equalToConstant: 350)
+            ])
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            NSLayoutConstraint.activate([
+                noTrnsViewAnimatio_BV.heightAnchor.constraint(equalToConstant: 700)
+            ])
+        }
     }
     
     private func addNavBar() {
@@ -64,11 +79,11 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
     
     private func setupAnimation() {
         animationView.animation = .named("data-scanning")
-        animationView.frame = noTransactionsView.bounds
+        animationView.frame = noTrnsViewAnimatio_BV.bounds
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
         animationView.play()
-        noTransactionsView.addSubview(animationView)
+        noTrnsViewAnimatio_BV.addSubview(animationView)
     }
     
     public func animatedTableView() {

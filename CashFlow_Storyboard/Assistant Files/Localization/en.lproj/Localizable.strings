@@ -52,7 +52,7 @@
 "lastTranLabel" = "Last Transactions";
 "viewAll" = "View all";
 "todayLabel" = "TODAY";
-"addNewTranLabel" = "Add New Tranactions";
+"addNewTranLabel" = "Add New Transactions";
 "expenseL" = "Expense";
 "incomeL" = "Income";
 "actionSheetTitle" = "Would you like to delete this transaction?";

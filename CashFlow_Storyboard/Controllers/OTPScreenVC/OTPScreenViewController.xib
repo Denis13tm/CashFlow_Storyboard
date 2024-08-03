@@ -236,7 +236,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-Ev-phf">
                                                             <rect key="frame" x="5" y="5" width="75" height="68.333333333333329"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-rN-KLR">
+                                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFV-rN-KLR">
                                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="68.333333333333329"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                                                     <state key="normal" title="1">
@@ -246,6 +246,12 @@
                                                                         <action selector="btnTapped:" destination="-1" eventType="touchUpInside" id="dhI-jZ-SOl"/>
                                                                     </connections>
                                                                 </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gdgdf" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXz-2t-Ecg">
+                                                                    <rect key="frame" x="14.666666666666654" y="68.333333333333314" width="45.666666666666657" height="0.0"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="fFV-rN-KLR" firstAttribute="top" secondItem="ohF-Ev-phf" secondAttribute="top" id="GP4-Jw-Lxx"/>
@@ -616,9 +622,9 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-28-ml2">
-                                    <rect key="frame" x="337" y="302" width="57" height="36"/>
+                                    <rect key="frame" x="322" y="299" width="62" height="39"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                     <state key="normal" title="Delete">
                                         <color key="titleColor" systemColor="secondaryLabelColor"/>
                                     </state>
@@ -631,7 +637,7 @@
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="gM6-28-ml2" secondAttribute="bottom" constant="30" id="NcJ-W4-7bJ"/>
                                 <constraint firstAttribute="trailing" secondItem="AS5-d8-ZU3" secondAttribute="trailing" constant="10" id="Od2-eS-BDG"/>
-                                <constraint firstAttribute="trailing" secondItem="gM6-28-ml2" secondAttribute="trailing" constant="20" id="SoR-4C-G0e"/>
+                                <constraint firstAttribute="trailing" secondItem="gM6-28-ml2" secondAttribute="trailing" constant="30" id="SoR-4C-G0e"/>
                                 <constraint firstItem="AS5-d8-ZU3" firstAttribute="top" secondItem="RDz-ui-G7o" secondAttribute="top" constant="10" id="fKM-ie-vtJ"/>
                                 <constraint firstAttribute="bottom" secondItem="AS5-d8-ZU3" secondAttribute="bottom" constant="30" id="rTl-Vh-DQh"/>
                                 <constraint firstItem="AS5-d8-ZU3" firstAttribute="leading" secondItem="RDz-ui-G7o" secondAttribute="leading" constant="10" id="x5I-qY-agt"/>

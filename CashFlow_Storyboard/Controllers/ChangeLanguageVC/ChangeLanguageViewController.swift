@@ -9,8 +9,6 @@ import UIKit
 
 class ChangeLanguageViewController: UIViewController {
     
-    @IBOutlet var non_View: UIView!
-    
     @IBOutlet var english: UILabel!
     @IBOutlet var korean: UILabel!
     @IBOutlet var uzbek: UILabel!
@@ -40,7 +38,6 @@ class ChangeLanguageViewController: UIViewController {
     //MARK: - Methods
     
     private func initViews() {
-        nonView()
         setupLabelTap()
         languageRange_BV.layer.cornerRadius = 13.0
         modifierUI(ui: languageRange_BV)
@@ -60,18 +57,7 @@ class ChangeLanguageViewController: UIViewController {
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
         nv.modalPresentationStyle = .fullScreen
-//        self.present(nv, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private func nonView() {
-        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.nonViewTapped))
-        self.non_View.isUserInteractionEnabled = true
-        self.non_View.addGestureRecognizer(labelTap)
-        }
-
-    @objc func nonViewTapped(_ sender: UITapGestureRecognizer) {
-        self.dismiss(animated: true, completion: nil)
+        self.present(nv, animated: true, completion: nil)
     }
     
     

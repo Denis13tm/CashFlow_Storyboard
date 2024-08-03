@@ -6,7 +6,7 @@
 
 import UIKit
 
-class SetCurrentBalanceViewController: UIViewController {
+class SetCurrentBalanceViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var title_label: UILabel!
     @IBOutlet var description_label: UILabel!
@@ -16,6 +16,7 @@ class SetCurrentBalanceViewController: UIViewController {
     @IBOutlet var nextBtnBackgroundView: UIView!
     @IBOutlet var backgroundView: UIView!
     
+    @IBOutlet weak var warningLabel: UILabel!
     
     var title2 = "title2".localized()
     var description2 = "description2".localized()
@@ -32,10 +33,16 @@ class SetCurrentBalanceViewController: UIViewController {
     //MARK: - Actions
 
     @IBAction func NextBtn_Action(_ sender: Any) {
-        defaults.saveCashBalance(balance: cashBalance.text!)
-        defaults.saveIncome(income: "0")
-        defaults.saveExpense(expense: "0")
-        callSetOTPScreen()
+        
+        if !cashBalance.text!.isEmpty {
+            defaults.saveCashBalance(balance: cashBalance.text!)
+            defaults.saveIncome(income: "0")
+            defaults.saveExpense(expense: "0")
+            callSetOTPScreen()
+        } else {
+            warningLabel.isHidden = false
+        }
+        
     }
     
     //MARK: - Methods
@@ -46,6 +53,18 @@ class SetCurrentBalanceViewController: UIViewController {
         nextBtnBackgroundView.layer.cornerRadius = 18.0
         modifierUI(ui: nextBtnBackgroundView)
         backgroundView.layer.cornerRadius = 13.0
+        
+        setUp_texField()
+    }
+    
+    private func setUp_texField() {
+        self.cashBalance.delegate = self
+    
+        self.cashBalance.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
+    }
+    
+    @objc func changeCharacter() {
+        warningLabel.isHidden = true
     }
     
     private func modifierUI(ui: UIView) {

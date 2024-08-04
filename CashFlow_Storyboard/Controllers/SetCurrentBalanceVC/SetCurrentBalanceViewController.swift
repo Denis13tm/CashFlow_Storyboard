@@ -21,6 +21,7 @@ class SetCurrentBalanceViewController: UIViewController, UITextFieldDelegate {
     var title2 = "title2".localized()
     var description2 = "description2".localized()
     var currencyLabel = "currencyLabel".localized()
+    var warningLabel2 = "warningLabel2".localized()
     
     let defaults = DefaultsOfUser()
 
@@ -59,7 +60,6 @@ class SetCurrentBalanceViewController: UIViewController, UITextFieldDelegate {
     
     private func setUp_texField() {
         self.cashBalance.delegate = self
-    
         self.cashBalance.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
     }
     
@@ -78,6 +78,7 @@ class SetCurrentBalanceViewController: UIViewController, UITextFieldDelegate {
         title_label.text = title2
         description_label.text = description2
         baseCurrency.text = currencyLabel
+        warningLabel.text = warningLabel2
     }
     
     private func callSetOTPScreen() {

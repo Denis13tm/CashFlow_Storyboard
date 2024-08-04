@@ -121,8 +121,7 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="Tav-nM-5NV" firstAttribute="leading" secondItem="2bc-va-zvK" secondAttribute="leading" constant="20" id="H8V-y0-owl"/>
-                                <constraint firstAttribute="trailing" secondItem="Tav-nM-5NV" secondAttribute="trailing" constant="20" id="RuC-mA-X9d"/>
+                                <constraint firstItem="Tav-nM-5NV" firstAttribute="centerX" secondItem="2bc-va-zvK" secondAttribute="centerX" id="Fua-SM-LyB"/>
                                 <constraint firstItem="Tav-nM-5NV" firstAttribute="centerY" secondItem="2bc-va-zvK" secondAttribute="centerY" id="V60-1g-tft"/>
                                 <constraint firstItem="Lli-bE-NeC" firstAttribute="top" secondItem="2bc-va-zvK" secondAttribute="top" constant="35" id="WQP-Ic-Vac"/>
                                 <constraint firstAttribute="trailing" secondItem="Lli-bE-NeC" secondAttribute="trailing" constant="16" id="bmf-Uk-aNX"/>

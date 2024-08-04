@@ -24,6 +24,7 @@
 // Set Up Cash Balance Screen
 "title2" = "Set up your current cash balance";
 "description2" = "How much cash do you have in your physical wallet? Insert above to show your actual cash balance on the main page.";
+"warningLabel2" = "Please, enter your current balance!";
 
 // Set Up OTP Screen
 "title3" = "Set up a new password";

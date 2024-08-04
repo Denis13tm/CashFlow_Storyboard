@@ -24,6 +24,7 @@
 // Set Up Cash Balance Screen
 "title2" = "현재 현금 잔액을 설정합니다";
 "description2" = "당신의 실물 지갑에 현금이 얼마나 있나요? 당신의 실제 현금 잔고를 메인 페이지에 나타내려면 위에 삽입하세요.";
+"warningLabel2" = "현재 잔액을 입력하세요!";
 
 // Set Up OTP Screen
 "title3" = "새 암호를 설정합니다.";

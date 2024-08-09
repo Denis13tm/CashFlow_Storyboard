@@ -16,8 +16,8 @@
                 <outlet property="kor_BV" destination="CZa-C1-AWF" id="GOt-GC-OE8"/>
                 <outlet property="korean" destination="KKp-oX-Zej" id="wLY-gE-tkK"/>
                 <outlet property="languageRange_BV" destination="zIl-Zd-QHe" id="IL6-Rq-sbI"/>
-                <outlet property="uz_BV" destination="fRo-a9-adO" id="2KW-5B-BWO"/>
-                <outlet property="uzbek" destination="c9J-N6-va0" id="zQT-C1-8hw"/>
+                <outlet property="rus_BV" destination="fRo-a9-adO" id="2KW-5B-BWO"/>
+                <outlet property="russian" destination="c9J-N6-va0" id="zQT-C1-8hw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -2,9 +2,27 @@
 //  HelperExtensions.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev
+//  Created by Otabek Tuychiev.
 
 import UIKit
+
+
+extension UIView {
+    func applyCornerRadius(_ radius: CGFloat) {
+            self.layer.cornerRadius = radius
+            self.layer.masksToBounds = true
+        }
+    
+    func applyShadow(cornerRadius: CGFloat = 5.0, shadowColor: UIColor = .black, shadowOpacity: Float = 0.5, shadowOffset: CGSize = .zero, shadowRadius: CGFloat = 5.0) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowRadius = shadowRadius
+    }
+}
+
+
 
 // Put this piece of code anywhere you like to hide default keyboard
 extension UIViewController {

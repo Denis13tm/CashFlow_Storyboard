@@ -132,7 +132,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func getUpdates() {
         NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .cashBalanceDidChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .singleTrnDidDeleted, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: .singleTrnDidDeleted, object: nil)
+    }
+    
+    @objc private func updateTableView() {
+        transactions = coreDB.fetchTransactions()
+        self.table_View.reloadData()
     }
     
     @objc private func updateAllViews() {
@@ -430,8 +435,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 TransactionService.shared.deleteTransaction(transaction: lastTransaction)
                 self.transactions = TransactionService.shared.fetchTransactions()
-                self.table_View.reloadData()
                 NotificationCenter.default.post(name: .singleTrnDidDeleted, object: nil)
+                self.table_View.reloadData()
             }))
             actionsheet.addAction(UIAlertAction(title: actionSheetCancelTitle, style: .default, handler: { _ in
             }))

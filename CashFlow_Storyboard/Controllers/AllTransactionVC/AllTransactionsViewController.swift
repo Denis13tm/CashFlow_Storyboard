@@ -70,13 +70,6 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
         navigationController?.popViewController(animated: true)
     }
     
-    func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 10
-    }
-    
     private func setupAnimation() {
         animationView.animation = .named("data-scanning")
         animationView.frame = noTrnsViewAnimatio_BV.bounds
@@ -101,13 +94,6 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
             }, completion: nil)
             delayCounter += 1
         }
-    }
-    func callHomeScreen() {
-        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let nv = UINavigationController(rootViewController: vc)
-        nv.modalPresentationStyle = .fullScreen
-//        self.present(nv, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -190,8 +176,8 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
                     
                     TransactionService.shared.deleteTransaction(transaction: lastTransaction)
                     self.allTransactions = TransactionService.shared.fetchTransactions()
+                    NotificationCenter.default.post(name: .singleTrnDidDeleted, object: nil)
                     self.table_View.reloadData()
-                    callHomeScreen()
                 }))
                 actionsheet.addAction(UIAlertAction(title: actionSheetCancelTitle, style: .default, handler: { _ in
                 }))

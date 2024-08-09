@@ -102,29 +102,21 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         totalBalance_Label.text = Int(defaults.getCashBalance()!)?.formattedWithSeparator
         
         
-        expense_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: incomeVsExpense_BV)
-        income_BV.layer.cornerRadius = 18.0
+        expense_BV.applyCornerRadius(18.0)
+        incomeVsExpense_BV.applyShadow()
+        income_BV.applyCornerRadius(18.0)
         
-        totalBalance_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: totalBalance_BV)
-        leftSideOfTotalB_BV.layer.cornerRadius = 18.0
+        totalBalance_BV.applyShadow(cornerRadius: 18.0)
+        leftSideOfTotalB_BV.applyCornerRadius(18.0)
         
-        cancelBtn_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: cancelBtn_BV)
-        saveChangesBtn_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: saveChangesBtn_BV)
-        editBtn_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: editBtn_BV)
+        cancelBtn_BV.applyShadow(cornerRadius: 18.0)
+        saveChangesBtn_BV.applyShadow(cornerRadius: 18.0)
+        editBtn_BV.applyShadow(cornerRadius: 18.0)
         
-        editionGroup_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: editionGroup_BV)
-        totalSection.layer.cornerRadius = 18.0
-        modifierUI(ui: totalSection)
-        incomeSection.layer.cornerRadius = 18.0
-        modifierUI(ui: incomeSection)
-        expenseSection.layer.cornerRadius = 18.0
-        modifierUI(ui: expenseSection)
+        editionGroup_BV.applyShadow(cornerRadius: 18.0)
+        totalSection.applyShadow(cornerRadius: 18.0)
+        incomeSection.applyShadow(cornerRadius: 18.0)
+        expenseSection.applyShadow(cornerRadius: 18.0)
         
         getUpdates()
     }
@@ -178,13 +170,6 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         expenseLabel_Edition.text = expense_Edition
         cancel_Btn.setTitle(cancelBtn, for: .normal)
         save_Btn.setTitle(saveChangesBtn, for: .normal)
-    }
-    
-    func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 5
     }
     
     public func animatedBtn(btn: Any) {

@@ -11,22 +11,18 @@ class ChangeLanguageViewController: UIViewController {
     
     @IBOutlet var english: UILabel!
     @IBOutlet var korean: UILabel!
-    @IBOutlet var uzbek: UILabel!
-    
+    @IBOutlet var russian: UILabel!
     
     @IBOutlet var languageRange_BV: UIView!
     @IBOutlet var eng_BV: UIView!
     @IBOutlet var kor_BV: UIView!
-    @IBOutlet var uz_BV: UIView!
+    @IBOutlet var rus_BV: UIView!
     
     let defaults = DefaultsOfUser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
-        let blur = UIBlurEffect(style: .regular)
-        let visualEffectView = UIVisualEffectView(effect: blur)
-        view.addSubview(visualEffectView)
     }
     
     //MARK: - Actions
@@ -39,18 +35,10 @@ class ChangeLanguageViewController: UIViewController {
     
     private func initViews() {
         setupLabelTap()
-        languageRange_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: languageRange_BV)
-        eng_BV.layer.cornerRadius = 18.0
-        kor_BV.layer.cornerRadius = 18.0
-        uz_BV.layer.cornerRadius = 18.0
-    }
-    
-    private func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 5.0
+        languageRange_BV.applyShadow(cornerRadius: 13.0)
+        eng_BV.applyShadow(cornerRadius: 18.0)
+        kor_BV.applyShadow(cornerRadius: 18.0)
+        rus_BV.applyShadow(cornerRadius: 18.0)
     }
     
     private func callHomeScreen() {
@@ -64,7 +52,7 @@ class ChangeLanguageViewController: UIViewController {
     private func setupLabelTap() {
         _ENG_Tapped()
         _KOR_Tapped()
-        _UZB_Tapped()
+        _RUS_Tapped()
         }
 
     
@@ -92,13 +80,13 @@ class ChangeLanguageViewController: UIViewController {
         callHomeScreen()
     }
     
-    private func _UZB_Tapped() {
-        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.uzbTapped))
-        self.uzbek.isUserInteractionEnabled = true
-        self.uzbek.addGestureRecognizer(labelTap)
+    private func _RUS_Tapped() {
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.rusTapped))
+        self.russian.isUserInteractionEnabled = true
+        self.russian.addGestureRecognizer(labelTap)
         }
 
-    @objc func uzbTapped(_ sender: UITapGestureRecognizer) {
+    @objc func rusTapped(_ sender: UITapGestureRecognizer) {
         defaults.saveLanguage(baseLanguage: "RU")
         Bundle.setLanguage(lang: "ru")
         callHomeScreen()

@@ -49,30 +49,19 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
     // MARK: - Methods
     
     private func initViews() {
-        self.pickerView.isUserInteractionEnabled = false
-        
+        pickerView.isUserInteractionEnabled = false
         pickerView.delegate = self
         pickerView.dataSource = self
         fetchJSON()
         amount_TextField.addTarget(self, action: #selector(updateViews), for: .editingChanged)
         
-        mainView_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: mainView_BV)
-        priceLabel_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: priceLabel_BV)
-        backgroundView_1.layer.cornerRadius = 18.0
-        backgroundView_2.layer.cornerRadius = 18.0
+        mainView_BV.applyShadow(cornerRadius: 18.0)
+        priceLabel_BV.applyShadow(cornerRadius: 18.0)
+        backgroundView_1.applyShadow(cornerRadius: 18.0, shadowOpacity: 0.1)
+        backgroundView_2.applyShadow(cornerRadius: 18.0, shadowOpacity: 0.2)
         
         title_Label.text = title9
         amount_TextField.placeholder = amount_placeholder
-        
-    }
-    
-    private func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 5.0
     }
     
     @objc func updateViews(input: Double) {
@@ -81,25 +70,6 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
             let total = theAmountText * activeCurrency
             priceLabel.text = String(format: "%.2f", total)
         }
-    }
-    
-    //MARK: - Picker View...
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return currencyCode.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return currencyCode[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        activeCurrency = values[row]
-        updateViews(input: activeCurrency)
     }
     
     private func fetchJSON() {
@@ -154,5 +124,25 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
             }
         }.resume()
     }
+    
+    //MARK: - Picker View...
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return currencyCode.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return currencyCode[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        activeCurrency = values[row]
+        updateViews(input: activeCurrency)
+    }
+    
 //End.
 }

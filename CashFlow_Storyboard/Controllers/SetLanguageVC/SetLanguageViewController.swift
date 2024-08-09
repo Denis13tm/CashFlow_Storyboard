@@ -131,12 +131,12 @@ class SetLanguageViewController: UIViewController {
     }
     
     func _UZB_Tapped() {
-        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.uzbTapped))
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.rusTapped))
         self._UZB.isUserInteractionEnabled = true
         self._UZB.addGestureRecognizer(labelTap)
         }
 
-    @objc func uzbTapped(_ sender: UITapGestureRecognizer) {
+    @objc func rusTapped(_ sender: UITapGestureRecognizer) {
         defaults.saveLanguage(baseLanguage: "RU")
         baseLanguage_.text = "русский"
         Bundle.setLanguage(lang: "ru")

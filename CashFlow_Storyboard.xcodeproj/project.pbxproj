@@ -37,6 +37,7 @@
 		F6B1A6892BF756B900A7D65C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6B1A68B2BF756B900A7D65C /* Localizable.strings */; };
 		F6B1A69B2BF78DE600A7D65C /* OTPScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A6992BF78DE600A7D65C /* OTPScreenViewController.swift */; };
 		F6B1A69C2BF78DE600A7D65C /* OTPScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1A69A2BF78DE600A7D65C /* OTPScreenViewController.xib */; };
+		F6E117042C64EA7900DC8D8C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E117032C64EA7900DC8D8C /* Notifications.swift */; };
 		F6E8265B2BEF368100AEE7D9 /* SetPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826592BEF368100AEE7D9 /* SetPasscodeViewController.swift */; };
 		F6E8265C2BEF368100AEE7D9 /* SetPasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8265A2BEF368100AEE7D9 /* SetPasscodeViewController.xib */; };
 		F6E826602BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E8265E2BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift */; };
@@ -103,6 +104,7 @@
 		F6B1A6972BF77FD500A7D65C /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F6B1A6992BF78DE600A7D65C /* OTPScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPScreenViewController.swift; sourceTree = "<group>"; };
 		F6B1A69A2BF78DE600A7D65C /* OTPScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPScreenViewController.xib; sourceTree = "<group>"; };
+		F6E117032C64EA7900DC8D8C /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		F6E826592BEF368100AEE7D9 /* SetPasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasscodeViewController.swift; sourceTree = "<group>"; };
 		F6E8265A2BEF368100AEE7D9 /* SetPasscodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetPasscodeViewController.xib; sourceTree = "<group>"; };
 		F6E8265E2BEF3CB500AEE7D9 /* ChangeLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +291,16 @@
 			path = OTPScreenVC;
 			sourceTree = "<group>";
 		};
+		F6E117022C64E9C400DC8D8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6B1A6852BF74F8000A7D65C /* LanguagesExtension.swift */,
+				F6A5005E2C5646B00019B21A /* HelperExtensions.swift */,
+				F6E117032C64EA7900DC8D8C /* Notifications.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F6E826582BEF354D00AEE7D9 /* SetPasscodeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,13 +366,12 @@
 		F6E8267F2BF656FD00AEE7D9 /* Assistant Files */ = {
 			isa = PBXGroup;
 			children = (
+				F6E117022C64E9C400DC8D8C /* Extensions */,
 				F6A500602C56477B0019B21A /* Localization */,
 				F6A500592C563D840019B21A /* jsonfiles animation */,
 				F6E826822BF6577200AEE7D9 /* UserDefaults.swift */,
 				F6B1A67D2BF70E6900A7D65C /* CoreDataManager.swift */,
 				F6B1A67F2BF713DD00A7D65C /* TransactionService.swift */,
-				F6B1A6852BF74F8000A7D65C /* LanguagesExtension.swift */,
-				F6A5005E2C5646B00019B21A /* HelperExtensions.swift */,
 			);
 			path = "Assistant Files";
 			sourceTree = "<group>";
@@ -468,6 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E117042C64EA7900DC8D8C /* Notifications.swift in Sources */,
 				F6B1A69B2BF78DE600A7D65C /* OTPScreenViewController.swift in Sources */,
 				F6A5005F2C5646B00019B21A /* HelperExtensions.swift in Sources */,
 				F6E8265B2BEF368100AEE7D9 /* SetPasscodeViewController.swift in Sources */,
@@ -653,7 +665,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = LWVBT323AX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CashFlow_Storyboard/Info.plist;
@@ -671,7 +683,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "NotYet.CashFlow-Storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -690,7 +702,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = LWVBT323AX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CashFlow_Storyboard/Info.plist;
@@ -708,7 +720,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "NotYet.CashFlow-Storyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

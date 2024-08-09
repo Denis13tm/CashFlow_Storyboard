@@ -2,7 +2,7 @@
 //  UserDefaults.swift
 //  CashFlow_Storyboard
 //
-//  Created by Otabek Tuychiev on 17/05/2024.
+//  Created by Otabek Tuychiev.
 //
 
 import UIKit

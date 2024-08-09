@@ -121,12 +121,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         addNavigationbar()
         getModifiedViews()
         setLangValue()
+        getUpdates()
         
         table_View.dataSource = self
         table_View.delegate = self
         
         transactions = coreDB.fetchTransactions()
         table_View.reloadData()
+    }
+    
+    private func getUpdates() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .cashBalanceDidChanged, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .singleTrnDidDeleted, object: nil)
+    }
+    
+    @objc private func updateAllViews() {
+        totalBalance.text = Int(defaults.getCashBalance()!)?.formattedWithSeparator
+        baseCurrency.text = defaults.getCurrency()
+        incomeLabel.text = Int(defaults.getIncome()!)?.formattedWithSeparator
+        expenseLabel.text = Int(defaults.getExpense()!)?.formattedWithSeparator
     }
     
     private func identifyUIDevice() {
@@ -244,14 +257,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         table_View.reloadData()
     }
     
-  
-    func callHomeScreen() {
-        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let nv = UINavigationController(rootViewController: vc)
-        nv.modalPresentationStyle = .fullScreen
-//        self.present(nv, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
     func callAddNewTrnScreen() {
         let vc = NewTransactionViewController(nibName: "NewTransactionViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
@@ -267,12 +272,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func callCurrencyConverterScreen() {
         let vc = CurrencyConverterViewController(nibName: "CurrencyConverterViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
+        nv.modalPresentationStyle = .overFullScreen
         self.present(nv, animated: true, completion: nil)
     }
     func callChangeLanguageScreen() {
         let vc = ChangeLanguageViewController(nibName: "ChangeLanguageViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
-//        nv.modalPresentationStyle = .fullScreen
+        nv.modalPresentationStyle = .overFullScreen
         self.present(nv, animated: true, completion: nil)
     }
     func callProfileScreen() {
@@ -425,7 +431,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 TransactionService.shared.deleteTransaction(transaction: lastTransaction)
                 self.transactions = TransactionService.shared.fetchTransactions()
                 self.table_View.reloadData()
-                callHomeScreen()
+                NotificationCenter.default.post(name: .singleTrnDidDeleted, object: nil)
             }))
             actionsheet.addAction(UIAlertAction(title: actionSheetCancelTitle, style: .default, handler: { _ in
             }))

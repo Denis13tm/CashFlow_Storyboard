@@ -72,6 +72,7 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
     
     
     let defaults = DefaultsOfUser()
+    var imgSelected: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,6 +126,18 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         expenseSection.layer.cornerRadius = 18.0
         modifierUI(ui: expenseSection)
         
+        getUpdates()
+    }
+    
+    private func getUpdates() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .cashBalanceDidChanged, object: nil)
+    }
+
+    @objc private func updateAllViews() {
+        incomeLabel.text = Int(defaults.getIncome()!)?.formattedWithSeparator
+        expenseLabel.text = Int(defaults.getExpense()!)?.formattedWithSeparator
+        currencyLabel.text = defaults.getCurrency()
+        totalBalance_Label.text = Int(defaults.getCashBalance()!)?.formattedWithSeparator
     }
     
     private func addNavigationbar() {
@@ -149,14 +162,8 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         present(vc, animated: true)
     }
     
-    var imgSelected: Bool?
     private func backBtn_Action() {
-        if imgSelected == true {
-            callHomeScreen()
-        } else {
-            navigationController?.popViewController(animated: true)
-//            dismiss(animated: true, completion: nil)
-        }
+        navigationController?.popViewController(animated: true)
     }
     
     func setLangValue() {
@@ -180,29 +187,6 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         ui.layer.shadowRadius = 5
     }
     
-    func callHomeScreen() {
-        let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let nv = UINavigationController(rootViewController: vc)
-        nv.modalPresentationStyle = .fullScreen
-//        self.present(nv, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-
-    //MARK: - Actions
-    
-    @IBAction func editBtn_Action(_ sender: Any) {
-        incomeVsExpense_BV.isHidden = true
-        btnsGroup_BV.isHidden = false
-        editBtn_BV.isHidden = true
-        btnsGroup_BV.isHidden = false
-        totalBalance_BV.isHidden = true
-        editionGroup_BV.isHidden = false
-        
-        animatedBtn(btn: cancelBtn_BV ?? (Any).self)
-        animatedBtn(btn: saveChangesBtn_BV ?? (Any).self)
-        animatedBtn(btn: editionGroup_BV ?? (Any).self)
-    }
-    
     public func animatedBtn(btn: Any) {
         let button = btn as! UIView
         let bounds = button.bounds
@@ -220,9 +204,20 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    private func editBtnTapped() {
+        incomeVsExpense_BV.isHidden = true
+        btnsGroup_BV.isHidden = false
+        editBtn_BV.isHidden = true
+        btnsGroup_BV.isHidden = false
+        totalBalance_BV.isHidden = true
+        editionGroup_BV.isHidden = false
+        
+        animatedBtn(btn: cancelBtn_BV ?? (Any).self)
+        animatedBtn(btn: saveChangesBtn_BV ?? (Any).self)
+        animatedBtn(btn: editionGroup_BV ?? (Any).self)
+    }
     
-    
-    @IBAction func cancelBtn_Action(_ sender: Any) {
+    private func cancelBtnTapped() {
         incomeVsExpense_BV.isHidden = false
         btnsGroup_BV.isHidden = true
         editBtn_BV.isHidden = false
@@ -235,7 +230,7 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
         animatedBtn(btn: totalBalance_BV ?? (Any).self)
     }
     
-    @IBAction func saveChangesBtn_Action(_ sender: Any) {
+    private func saveChangesBtnTapped() {
         incomeVsExpense_BV.isHidden = false
         btnsGroup_BV.isHidden = true
         editBtn_BV.isHidden = false
@@ -259,7 +254,22 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
             defaults.saveExpense(expense: defaults.getExpense()!)
         }
         
-        callHomeScreen()
+        NotificationCenter.default.post(name: .cashBalanceDidChanged, object: nil)
+    }
+    
+
+    //MARK: - Actions
+    
+    @IBAction func editBtn_Action(_ sender: Any) {
+        editBtnTapped()
+    }
+    
+    @IBAction func cancelBtn_Action(_ sender: Any) {
+        cancelBtnTapped()
+    }
+    
+    @IBAction func saveChangesBtn_Action(_ sender: Any) {
+        saveChangesBtnTapped()
     }
 
 }

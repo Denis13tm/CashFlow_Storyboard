@@ -9,18 +9,21 @@ import UIKit
 
 class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet var priceLabel: UILabel!
-    @IBOutlet var priceLabel_BV: UIView!
-    @IBOutlet var title_Label: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var priceLabel_BV: UIView!
+    @IBOutlet weak var title_Label: UILabel!
     
     
-    @IBOutlet var mainView_BV: UIView!
-    @IBOutlet var amount_TextField: UITextField!
-    @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet weak var mainView_BV: UIView!
+    @IBOutlet weak var amount_TextField: UITextField!
+    @IBOutlet weak var pickerView: UIPickerView!
     
     
-    @IBOutlet var backgroundView_1: UIView!
-    @IBOutlet var backgroundView_2: UIView!
+    @IBOutlet weak var backgroundView_1: UIView!
+    @IBOutlet weak var backgroundView_2: UIView!
+    
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    @IBOutlet weak var noInternetConnection: UILabel!
     
     var title9 = "title9".localized()
     var amount_placeholder = "amount_placeholder".localized()
@@ -102,25 +105,39 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
     
     
     private func fetchJSON() {
+        
+        loadingView.startAnimating()
+        noInternetConnection.isHidden = true
+        
         guard let url = URL(string: "https://open.exchangerate-api.com/v6/latest") else { return }
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            //handling any errors if there ara any
-            if error != nil {
-                print(error!)
-                return
-            }
-
-            //safely unwrap the data
-            guard let safeDate = data else { return }
-
-            //decode JSON Data
-            do {
-                let results = try JSONDecoder().decode(ExchangeRates.self, from: safeDate)
-                self.currencyCode.append(contentsOf: results.rates.keys)
-                self.values.append(contentsOf: results.rates.values)
-            } catch {
-                print(error)
+            //Hide the loading view
+            DispatchQueue.main.async {
+                self.loadingView.stopAnimating()
+                self.loadingView.isHidden = true
+                //handling any errors if there ara any
+                if error != nil {
+                    self.noInternetConnection.isHidden = false
+                    print("error ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+                    return
+                }
+                //safely unwrap the data
+                guard let safeDate = data else {
+                    self.noInternetConnection.isHidden = false
+                    self.noInternetConnection.text = "No Data 404"
+                    print("No Data 404 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+                    return
+                }
+                //decode JSON Data
+                do {
+                    let results = try JSONDecoder().decode(ExchangeRates.self, from: safeDate)
+                    self.currencyCode.append(contentsOf: results.rates.keys)
+                    self.values.append(contentsOf: results.rates.values)
+                    self.pickerView.isUserInteractionEnabled = true
+                } catch {
+                    print("error ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>000")
+                }
             }
         }.resume()
 

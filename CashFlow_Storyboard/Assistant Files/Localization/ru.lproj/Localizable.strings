@@ -73,7 +73,10 @@
 "setDate" = "Установить дату ▼";
 "notes" = "Примечания:";
 "notePlaceholder" = "Введите несколько примечаний";
-"error!!!" = "Ошибка !!!!";
+"typeWarningLabel" = "Выберите тип, пожалуйста!";
+"amountWarningLabel" = "Введите сумму, пожалуйста!";
+"dateWarningLabel" = "Выберите дату, пожалуйста!";
+"notesWarningLabel" = "Введите заметки, пожалуйста!";
 "saveBtn" = "Сохранять";
 
 //Selected Transaction Screen

@@ -73,7 +73,10 @@
 "setDate" = "Set Date ▼";
 "notes" = "Notes:";
 "notePlaceholder" = "Enter some notes";
-"error!!!" = "Error !!!!";
+"typeWarningLabel" = "Select type please!";
+"amountWarningLabel" = "Insert amount please!";
+"dateWarningLabel" = "Select date please!";
+"notesWarningLabel" = "Insert notes please!";
 "saveBtn" = "Save";
 
 //Selected Transaction Screen

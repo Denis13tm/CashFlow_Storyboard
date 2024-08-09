@@ -132,12 +132,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     private func getUpdates() {
         NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .cashBalanceDidChanged, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateTableView), name: .singleTrnDidDeleted, object: nil)
-    }
-    
-    @objc private func updateTableView() {
-        transactions = coreDB.fetchTransactions()
-        self.table_View.reloadData()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAllViews), name: .singleTrnDidDeleted, object: nil)
     }
     
     @objc private func updateAllViews() {
@@ -145,6 +140,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         baseCurrency.text = defaults.getCurrency()
         incomeLabel.text = Int(defaults.getIncome()!)?.formattedWithSeparator
         expenseLabel.text = Int(defaults.getExpense()!)?.formattedWithSeparator
+        
+        transactions = coreDB.fetchTransactions()
+        self.table_View.reloadData()
     }
     
     private func identifyUIDevice() {

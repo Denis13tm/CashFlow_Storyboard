@@ -73,7 +73,10 @@
 "setDate" = "날짜 설정 ▼";
 "notes" = "메모들:";
 "notePlaceholder" = "참고 사항 입력";
-"error!!!" = "Error !!!!";
+"typeWarningLabel" = "유형을 선택하세요!";
+"amountWarningLabel" = "금액을 입력하세요!";
+"dateWarningLabel" = "날짜를 선택하세요!";
+"notesWarningLabel" = "메모를 입력하세요!";
 "saveBtn" = "저장";
 
 //Selected Transaction Screen

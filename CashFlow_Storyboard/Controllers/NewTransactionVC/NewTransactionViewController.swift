@@ -51,7 +51,10 @@ class NewTransactionViewController: UIViewController {
     var setDate = "setDate".localized()
     var notes = "notes".localized()
     var notePlaceholder = "notePlaceholder".localized()
-    var errorLabel = "error".localized()
+    var typeWarningLabel = "typeWarningLabel".localized()
+    var amountWarningLabel = "amountWarningLabel".localized()
+    var dateWarningLabel = "dateWarningLabel".localized()
+    var notesWarningLabel = "notesWarningLabel".localized()
     var saveBtn_label = "saveBtn".localized()
     
     
@@ -69,26 +72,27 @@ class NewTransactionViewController: UIViewController {
     // MARK: - Actions
     @IBAction func saveNewTrnBtn(_ sender: Any) {
         
-        guard let type = typeSelectorIndicator.text else {
+        guard let type = typeSelectorIndicator.text, type != typeLabel else {
             warningLabel.isHidden = false
-            warningLabel.text = "Select type please"
+            warningLabel.text = typeWarningLabel
             return
         }
-        guard let amount = amountTextField.text, amountTextField.text != ""  else {
+        guard let amount = amountTextField.text, !amount.isEmpty else {
             warningLabel.isHidden = false
-            warningLabel.text = "Insert amount please"
+            warningLabel.text = amountWarningLabel
             return
         }
-        guard let date =  dateInputLabel.text, dateInputLabel.text != "" else {
+        guard let date = dateInputLabel.text, date != setDate else {
             warningLabel.isHidden = false
-            warningLabel.text = "Select date please"
+            warningLabel.text = dateWarningLabel
             return
         }
-        guard let notes = notesLabel.text, notesLabel.text != "" else {
+        guard let notes = notesLabel.text, !notes.isEmpty else {
             warningLabel.isHidden = false
-            warningLabel.text = "Insert notes please"
+            warningLabel.text = notesWarningLabel
             return
         }
+        warningLabel.isHidden = true
         
         //Calculation Stuff...
         var totalBalance = Int(defaults.getCashBalance()!)
@@ -100,13 +104,11 @@ class NewTransactionViewController: UIViewController {
             defaults.saveCashBalance(balance: String(totalBalance!))
             expense = expense! + Int(amount)!
             defaults.saveExpense(expense: String(expense!))
-            print("Expense")
         } else if type == (incomeL + " ▼") {
             totalBalance = totalBalance! + Int(amount)!
             defaults.saveCashBalance(balance: String(totalBalance!))
             income = income! + Int(amount)!
             defaults.saveIncome(income: String(income!))
-            print("Income")
         }
 
         coreDB.saveTransaction(
@@ -122,7 +124,6 @@ class NewTransactionViewController: UIViewController {
         dateFormatter.dateFormat = "dd.MM.yyyy"
         dateInputLabel.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
-        print(datePicker.date)
     }
     
     // MARK: - Methods
@@ -132,17 +133,12 @@ class NewTransactionViewController: UIViewController {
         setUpTransactionType()
         setLangValue()
         
-        typeSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: typeSection_BV)
-        modifierUI(ui: typeSelector_BV)
-        amountSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: amountSection_BV)
-        dateSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: dateSection_BV)
-        noteSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: noteSection_BV)
-        saveBtnBackgroundView.layer.cornerRadius = 18.0
-        modifierUI(ui: saveBtnBackgroundView)
+        typeSection_BV.applyShadow(cornerRadius: 13.0)
+        typeSelector_BV.applyShadow()
+        amountSection_BV.applyShadow(cornerRadius: 13.0)
+        dateSection_BV.applyShadow(cornerRadius: 13.0)
+        noteSection_BV.applyShadow(cornerRadius: 13.0)
+        saveBtnBackgroundView.applyShadow(cornerRadius: 18.0)
     }
     
     private func addNavBar() {
@@ -158,20 +154,12 @@ class NewTransactionViewController: UIViewController {
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
         let nv = UINavigationController(rootViewController: vc)
         nv.modalPresentationStyle = .fullScreen
-        //        self.present(nv, animated: true, completion: nil)
+//        self.present(nv, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 5.0
     }
     
     private func setLangValue() {
         currencyLabel.text = defaults.getCurrency()
-        
         type_label.text = type
         typeSelectorIndicator.text = typeLabel
         expenseSelectLabel.text = expenseL
@@ -181,9 +169,7 @@ class NewTransactionViewController: UIViewController {
         dateInputLabel.text = setDate
         notes_label.text = notes
         notesLabel.placeholder = notePlaceholder
-        warningLabel.text = errorLabel
         saveBtn.setTitle(saveBtn_label, for: .normal)
-        
     }
     
     //Type of Transaction...
@@ -231,20 +217,5 @@ class NewTransactionViewController: UIViewController {
         formatter.dateStyle = .short
         return currentDate
     }
-
-    func showUpTrn_AlertAction(body: String, object: Transaction) {
-        let alert = UIAlertController(title: "Hi, Boss", message: body, preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-//            self.realmDB.deleteTransaction(object: object)
-//            self.openScreen(vc: "Home_VC")
-            self.callHomeScreen()
-        }))
-        alert.addAction(UIAlertAction(title: "Not", style: .cancel, handler: { action in
-//            self.openScreen(vc: "Home_VC")
-            self.callHomeScreen()
-        }))
-    }
-
-
+//End.
 }

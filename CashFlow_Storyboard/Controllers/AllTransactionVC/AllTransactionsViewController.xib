@@ -23,29 +23,26 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Transactions Yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amn-SF-DaX">
+                    <rect key="frame" x="20" y="227" width="353" height="24"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                    <color key="textColor" red="0.30585539340000001" green="0.8274359107" blue="0.98066133259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-BQ-Kzz">
                     <rect key="frame" x="21.666666666666657" y="251" width="350" height="350"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QnB-NI-P4g">
-                            <rect key="frame" x="0.0" y="42" width="350" height="308"/>
+                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Transactions Yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amn-SF-DaX">
-                            <rect key="frame" x="20" y="10" width="310" height="24"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                            <color key="textColor" red="0.30585539340000001" green="0.8274359107" blue="0.98066133259999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="amn-SF-DaX" firstAttribute="top" secondItem="TvU-BQ-Kzz" secondAttribute="top" constant="10" id="4FV-La-rPy"/>
-                        <constraint firstAttribute="bottom" secondItem="QnB-NI-P4g" secondAttribute="bottom" id="6TO-uZ-eHt"/>
-                        <constraint firstItem="QnB-NI-P4g" firstAttribute="top" secondItem="amn-SF-DaX" secondAttribute="bottom" constant="8" id="GI1-o2-1xa"/>
-                        <constraint firstAttribute="trailing" secondItem="QnB-NI-P4g" secondAttribute="trailing" id="HNT-Wl-YdP"/>
-                        <constraint firstAttribute="trailing" secondItem="amn-SF-DaX" secondAttribute="trailing" constant="20" id="gbi-jo-FES"/>
-                        <constraint firstItem="amn-SF-DaX" firstAttribute="leading" secondItem="TvU-BQ-Kzz" secondAttribute="leading" constant="20" id="kJL-SL-8Qd"/>
+                        <constraint firstAttribute="bottom" secondItem="QnB-NI-P4g" secondAttribute="bottom" id="E8R-jS-eLs"/>
+                        <constraint firstItem="QnB-NI-P4g" firstAttribute="leading" secondItem="TvU-BQ-Kzz" secondAttribute="leading" id="f6H-OX-Nn7"/>
                         <constraint firstAttribute="height" constant="350" id="mX4-Ym-aib"/>
-                        <constraint firstItem="QnB-NI-P4g" firstAttribute="leading" secondItem="TvU-BQ-Kzz" secondAttribute="leading" id="n3B-Rd-uEt"/>
+                        <constraint firstItem="QnB-NI-P4g" firstAttribute="top" secondItem="TvU-BQ-Kzz" secondAttribute="top" id="nKj-TQ-Q11"/>
+                        <constraint firstAttribute="trailing" secondItem="QnB-NI-P4g" secondAttribute="trailing" id="pKa-O2-vgg"/>
                         <constraint firstAttribute="width" constant="350" id="xBY-OI-bvX"/>
                     </constraints>
                 </view>
@@ -61,8 +58,11 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Mp-zz-n13" secondAttribute="trailing" id="3ki-rX-UQu"/>
                 <constraint firstItem="7Mp-zz-n13" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="56W-jl-OaH"/>
                 <constraint firstItem="7Mp-zz-n13" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NY0-T1-d1I"/>
+                <constraint firstItem="amn-SF-DaX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="T7B-e5-iPJ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Mp-zz-n13" secondAttribute="bottom" id="Tz0-Dd-mWW"/>
                 <constraint firstItem="TvU-BQ-Kzz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="dfb-o2-v3h"/>
+                <constraint firstItem="TvU-BQ-Kzz" firstAttribute="top" secondItem="amn-SF-DaX" secondAttribute="bottom" id="kdj-ob-3fX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="amn-SF-DaX" secondAttribute="trailing" constant="20" id="sCa-Pf-nnQ"/>
             </constraints>
             <point key="canvasLocation" x="-109.16030534351144" y="-11.267605633802818"/>
         </view>

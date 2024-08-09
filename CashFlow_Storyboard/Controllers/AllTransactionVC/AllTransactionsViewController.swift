@@ -46,6 +46,7 @@ class AllTransactionsViewController: UIViewController, UITableViewDelegate, UITa
         noTranLabel.text = noTran
         table_View.dataSource = self
         table_View.delegate = self
+        table_View.reloadData()
     }
     
     private func identifyUIDevice() {

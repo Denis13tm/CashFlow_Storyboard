@@ -64,21 +64,12 @@ class SelectedTransactionViewController: UIViewController {
         amountTextField.text = amount
         dateInputLabel.text = date
         noteInputValue.text = note
-        
-        
-        typeSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: typeSection_BV)
-        
-        amountSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: amountSection_BV)
-        
-        dateSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: dateSection_BV)
-        
-        noteSection_BV.layer.cornerRadius = 13.0
-        modifierUI(ui: noteSection_BV)
+                
+        typeSection_BV.applyShadow(cornerRadius: 13.0)
+        amountSection_BV.applyShadow(cornerRadius: 13.0)
+        dateSection_BV.applyShadow(cornerRadius: 13.0)
+        noteSection_BV.applyShadow(cornerRadius: 13.0)
     }
-    
     
     private func setLangValue() {
         type_label.text = type1
@@ -86,13 +77,6 @@ class SelectedTransactionViewController: UIViewController {
         date_label.text = date1
         dateInputLabel.text = setDate
         notes_label.text = notes
-    }
-    
-    private func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 5.0
     }
     
     private func addNavBar() {

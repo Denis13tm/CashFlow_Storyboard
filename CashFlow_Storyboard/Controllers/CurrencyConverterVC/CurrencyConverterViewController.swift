@@ -75,12 +75,10 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
     }
     
     @objc func updateViews(input: Double) {
-        
         guard let amountText = amount_TextField.text, let theAmountText = Double(amountText) else { return }
         if amount_TextField.text != ""{
             let total = theAmountText * activeCurrency
             priceLabel.text = String(format: "%.2f", total)
-            
         }
     }
     
@@ -103,44 +101,53 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
         updateViews(input: activeCurrency)
     }
     
-    
     private func fetchJSON() {
-        
         loadingView.startAnimating()
         noInternetConnection.isHidden = true
         
         guard let url = URL(string: "https://open.exchangerate-api.com/v6/latest") else { return }
 
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            //Hide the loading view
             DispatchQueue.main.async {
+                // Hide the loading view
                 self.loadingView.stopAnimating()
                 self.loadingView.isHidden = true
-                //handling any errors if there ara any
+                
+                // Handle any errors
                 if error != nil {
                     self.noInternetConnection.isHidden = false
-                    print("error ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+                    print("Error fetching data: \(error!.localizedDescription)")
                     return
                 }
-                //safely unwrap the data
-                guard let safeDate = data else {
+                
+                // Safely unwrap the data
+                guard let safeData = data else {
                     self.noInternetConnection.isHidden = false
                     self.noInternetConnection.text = "No Data 404"
-                    print("No Data 404 ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+                    print("No data found")
                     return
                 }
-                //decode JSON Data
+                
+                // Decode JSON data
                 do {
-                    let results = try JSONDecoder().decode(ExchangeRates.self, from: safeDate)
-                    self.currencyCode.append(contentsOf: results.rates.keys)
-                    self.values.append(contentsOf: results.rates.values)
-                    self.pickerView.isUserInteractionEnabled = true
+                    let results = try JSONDecoder().decode(ExchangeRates.self, from: safeData)
+                    self.currencyCode = Array(results.rates.keys)
+                    self.values = Array(results.rates.values)
+                    
+                    // Reload the picker view with the new data
+                    self.pickerView.reloadAllComponents()
+                    
+                    // Optionally set a default selected currency
+                    if !self.values.isEmpty {
+                        self.activeCurrency = self.values[0]
+                        self.updateViews(input: self.activeCurrency)
+                    }
+                    
                 } catch {
-                    print("error ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>000")
+                    print("Error decoding JSON: \(error.localizedDescription)")
                 }
             }
         }.resume()
-
     }
-
+//End.
 }

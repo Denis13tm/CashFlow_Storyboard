@@ -93,7 +93,7 @@
                                                 </textField>
                                             </subviews>
                                         </stackView>
-                                        <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQD-99-KNv">
+                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQD-99-KNv">
                                             <rect key="frame" x="0.0" y="95.3333333333333" width="394" height="216.66666666666663"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </pickerView>

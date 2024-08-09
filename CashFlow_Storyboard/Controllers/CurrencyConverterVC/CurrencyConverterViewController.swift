@@ -49,6 +49,7 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
     // MARK: - Methods
     
     private func initViews() {
+        self.pickerView.isUserInteractionEnabled = false
         
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -116,6 +117,7 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
                 // Handle any errors
                 if error != nil {
                     self.noInternetConnection.isHidden = false
+                    self.pickerView.isUserInteractionEnabled = false
                     print("Error fetching data: \(error!.localizedDescription)")
                     return
                 }
@@ -136,6 +138,9 @@ class CurrencyConverterViewController: UIViewController, UIPickerViewDelegate, U
                     
                     // Reload the picker view with the new data
                     self.pickerView.reloadAllComponents()
+                    
+                    // Enable the picker view for interaction
+                    self.pickerView.isUserInteractionEnabled = true
                     
                     // Optionally set a default selected currency
                     if !self.values.isEmpty {

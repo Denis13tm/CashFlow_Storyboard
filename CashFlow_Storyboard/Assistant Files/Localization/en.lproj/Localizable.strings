@@ -11,7 +11,7 @@
 // Set Up Preferred Language Screen and General
 "title0" = "Select preferred language";
 "description0" = "Please select your preferred language to be used within the app. You can change this setting anytime on the main page.";
-"LangLabel" = "ENG";
+"LangLabel" = "English";
 
 // Set Up Base Currency Screen
 "title1" = "Select base currency";
@@ -28,7 +28,8 @@
 
 // Set Up OTP Screen
 "title3" = "Set up a new password";
-"errorLabel" = "Passcodes don't match. Please try again.";
+"errorLabel" = "Passcodes don't match. Please try again!";
+"pwWarningLabel" = "Please enter 4 digits password!";
 "headline" = "Enter 4 digits password please";
 "enterPassword" = "Enter password";
 "confirmPassword" = "Confirm password";

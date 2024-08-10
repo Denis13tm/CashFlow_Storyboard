@@ -13,6 +13,7 @@ class LaunchViewController: UIViewController {
     
     var launching = "launching".localized()
     public let userDefaults = UserDefaults.standard
+    let defaults = DefaultsOfUser()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,7 @@ class LaunchViewController: UIViewController {
         let vc = SetLanguageViewController(nibName: "SetLanguageViewController", bundle: nil)
         self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.pushViewController(vc, animated: true)
+        defaults.saveLanguage(baseLanguage: "ENG")
     }
     private func callBaseCurrencyScreen() {
         let vc = SetBaseCurrencyViewController(nibName: "SetBaseCurrencyViewController", bundle: nil)

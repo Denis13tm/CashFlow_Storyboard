@@ -71,8 +71,38 @@ class NewTransactionViewController: UIViewController {
 
     // MARK: - Actions
     @IBAction func saveNewTrnBtn(_ sender: Any) {
+        checkAndSaveInputs()
+    }
+    @IBAction func datePicker_Action(_ sender: Any) {
+        inputDateValue()
+    }
+    
+    // MARK: - Methods
+    
+    private func initViews() {
+        addNavBar()
+        setUpTransactionType()
+        setLangValue()
         
-        guard let type = typeSelectorIndicator.text, type != typeLabel else {
+        typeSection_BV.applyShadow(cornerRadius: 13.0)
+        typeSelector_BV.applyShadow()
+        amountSection_BV.applyShadow(cornerRadius: 13.0)
+        dateSection_BV.applyShadow(cornerRadius: 13.0)
+        noteSection_BV.applyShadow(cornerRadius: 13.0)
+        saveBtnBackgroundView.applyShadow(cornerRadius: 18.0)
+    }
+    
+    private func addNavBar() {
+        title = navTitle
+        let ic_back = UIImage(systemName: "chevron.backward")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: ic_back, style: .plain, target: self, action: #selector(backTapped))
+    }
+    @objc private func backTapped() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func checkAndSaveInputs() {
+        guard let type = typeSelectorIndicator.text else {
             warningLabel.isHidden = false
             warningLabel.text = typeWarningLabel
             return
@@ -116,38 +146,14 @@ class NewTransactionViewController: UIViewController {
             amount: amount,
             date: date,
             notes: notes)
-        
         callHomeScreen()
     }
-    @IBAction func datePicker_Action(_ sender: Any) {
+    
+    private func inputDateValue() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         dateInputLabel.text = dateFormatter.string(from: datePicker.date)
         self.view.endEditing(true)
-    }
-    
-    // MARK: - Methods
-    
-    private func initViews() {
-        addNavBar()
-        setUpTransactionType()
-        setLangValue()
-        
-        typeSection_BV.applyShadow(cornerRadius: 13.0)
-        typeSelector_BV.applyShadow()
-        amountSection_BV.applyShadow(cornerRadius: 13.0)
-        dateSection_BV.applyShadow(cornerRadius: 13.0)
-        noteSection_BV.applyShadow(cornerRadius: 13.0)
-        saveBtnBackgroundView.applyShadow(cornerRadius: 18.0)
-    }
-    
-    private func addNavBar() {
-        title = navTitle
-        let ic_back = UIImage(systemName: "chevron.backward")
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: ic_back, style: .plain, target: self, action: #selector(backTapped))
-    }
-    @objc private func backTapped() {
-        navigationController?.popViewController(animated: true)
     }
     
     private func callHomeScreen() {

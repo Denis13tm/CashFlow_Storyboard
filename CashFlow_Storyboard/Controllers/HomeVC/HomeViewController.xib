@@ -510,7 +510,7 @@
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-DC-TE3" userLabel="bottomSidesItemView">
-                    <rect key="frame" x="0.0" y="818" width="430" height="90"/>
+                    <rect key="frame" x="0.0" y="842" width="430" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="Rcv-NT-ijy">
                             <rect key="frame" x="30" y="20" width="370" height="40"/>
@@ -602,7 +602,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eUh-vG-r5K" secondAttribute="bottom" id="DKh-qu-lcf"/>
                 <constraint firstItem="FT9-V1-TqY" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" id="DYP-V0-fjp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eUh-vG-r5K" secondAttribute="trailing" id="Xml-NI-bZB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mF3-DC-TE3" secondAttribute="bottom" constant="-10" id="XnF-FM-qdu"/>
+                <constraint firstAttribute="bottom" secondItem="mF3-DC-TE3" secondAttribute="bottom" id="XnF-FM-qdu"/>
                 <constraint firstAttribute="trailing" secondItem="mF3-DC-TE3" secondAttribute="trailing" id="dXI-Nm-N5S"/>
                 <constraint firstItem="mF3-DC-TE3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="moE-s5-aPd"/>
                 <constraint firstItem="eUh-vG-r5K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yQY-0V-im0"/>
@@ -611,9 +611,9 @@
         </view>
     </objects>
     <resources>
-        <image name="cardViewImage" width="242" height="104"/>
+        <image name="cardViewImage" width="80.666664123535156" height="34.666667938232422"/>
         <image name="coloncurrencysign.circle" catalog="system" width="128" height="123"/>
-        <image name="gradiantBV" width="392" height="149"/>
+        <image name="gradiantBV" width="130.66667175292969" height="49.666667938232422"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
         <image name="tray" catalog="system" width="128" height="88"/>

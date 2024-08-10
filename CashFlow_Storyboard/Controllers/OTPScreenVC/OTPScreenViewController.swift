@@ -9,7 +9,9 @@ import UIKit
 
 class OTPScreenViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var warningLabel: UILabel!
+    @IBOutlet weak var deleteLabel: UIButton!
     
     @IBOutlet weak var tf1: UITextField!
     @IBOutlet weak var tf2: UITextField!
@@ -28,10 +30,13 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var btn0_BV: UIView!
     
     
+    var title4 = "title4".localized()
+    var errorLabel = "errorL".localized()
+    var deleteBtn = "delete".localized()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initViews()
-        warningLabel.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,16 +58,18 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Helper Methods
     
     private func initViews() {
-        btn1_BV.layer.cornerRadius = 12.0
-        btn2_BV.layer.cornerRadius = 12.0
-        btn3_BV.layer.cornerRadius = 12.0
-        btn4_BV.layer.cornerRadius = 12.0
-        btn5_BV.layer.cornerRadius = 12.0
-        btn6_BV.layer.cornerRadius = 12.0
-        btn7_BV.layer.cornerRadius = 12.0
-        btn8_BV.layer.cornerRadius = 12.0
-        btn9_BV.layer.cornerRadius = 12.0
-        btn0_BV.layer.cornerRadius = 12.0
+        setLangValue()
+        
+        btn1_BV.applyCornerRadius(12.0)
+        btn2_BV.applyCornerRadius(12.0)
+        btn3_BV.applyCornerRadius(12.0)
+        btn4_BV.applyCornerRadius(12.0)
+        btn5_BV.applyCornerRadius(12.0)
+        btn6_BV.applyCornerRadius(12.0)
+        btn7_BV.applyCornerRadius(12.0)
+        btn8_BV.applyCornerRadius(12.0)
+        btn9_BV.applyCornerRadius(12.0)
+        btn0_BV.applyCornerRadius(12.0)
         
         tf1.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
         tf2.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
@@ -89,6 +96,12 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
             }
         }
     
+    private func setLangValue() {
+        titleLabel.text = title4
+        warningLabel.text = errorLabel
+        deleteLabel.setTitle(deleteBtn, for: .normal)
+    }
+    
     private func callHomeScreen() {
         let vc = HomeViewController(nibName: "HomeViewController", bundle: nil)
         self.navigationController?.navigationBar.isHidden = false
@@ -102,7 +115,7 @@ class OTPScreenViewController: UIViewController, UITextFieldDelegate {
                 showWarning(message: "OTP matched!", isError: false)
                 callHomeScreen()
             } else {
-                showWarning(message: "Wrong passcode. Please try again !", isError: true)
+                showWarning(message: errorLabel, isError: true)
             }
         }
     

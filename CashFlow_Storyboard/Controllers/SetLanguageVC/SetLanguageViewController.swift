@@ -22,7 +22,7 @@ class SetLanguageViewController: UIViewController {
     
     @IBOutlet var _ENG: UILabel!
     @IBOutlet var _KOR: UILabel!
-    @IBOutlet var _UZB: UILabel!
+    @IBOutlet var _RUS: UILabel!
     
     
     var title0 = "title0".localized()
@@ -47,18 +47,14 @@ class SetLanguageViewController: UIViewController {
     // MARK: - Methods
     
     private func initViews() {
-        
         setLangValue()
         setupLabelTap()
-        
-        baseLanguage_BV.layer.cornerRadius = 13.0
-        rangeBackground.layer.cornerRadius = 13.0
-        modifierUI(ui: rangeBackground)
-        languageRange.layer.cornerRadius = 13.0
-        bakgroundView.layer.cornerRadius = 13.0
-        baseLanguage_.layer.cornerRadius = 13.0
-        nextBtn_BV.layer.cornerRadius = 18.0
-        modifierUI(ui: nextBtn_BV)
+        baseLanguage_BV.applyCornerRadius(13.0)
+        rangeBackground.applyShadow(cornerRadius: 13.0)
+        languageRange.applyCornerRadius(13.0)
+        bakgroundView.applyCornerRadius(13.0)
+        baseLanguage_.applyCornerRadius(13.0)
+        nextBtn_BV.applyShadow(cornerRadius: 13.0)
     }
     
     private func callBaseCurrencyScreen() {
@@ -72,13 +68,6 @@ class SetLanguageViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 10
-    }
-    
     func setLangValue() {
         title_label.text = title0
         description_label.text = description0
@@ -90,30 +79,34 @@ class SetLanguageViewController: UIViewController {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.labelTapped))
         self.baseLanguage_.isUserInteractionEnabled = true
         self.baseLanguage_.addGestureRecognizer(labelTap)
-
-        }
+    }
 
     @objc func labelTapped(_ sender: UITapGestureRecognizer) {
         languageRange.isHidden.toggle()
         _ENG_Tapped()
         _KOR_Tapped()
-        _UZB_Tapped()
-        
+        _RUS_Tapped()
     }
     
     func _ENG_Tapped() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.engTapped))
         self._ENG.isUserInteractionEnabled = true
         self._ENG.addGestureRecognizer(labelTap)
-
-        }
+    }
 
     @objc func engTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "ENG")
-        baseLanguage_.text = "ENGLISH"
-        Bundle.setLanguage(lang: "en")
+        let newLanguage = "ENG"
+        let newLanguageText = "English"
+        let currentLanguage = defaults.getLanguage()
+        
+        if currentLanguage != newLanguage {
+            defaults.saveLanguage(baseLanguage: newLanguage)
+            baseLanguage_.text = newLanguageText
+            Bundle.setLanguage(lang: "en")
+            languageRange.isHidden.toggle()
+            callSetLanguageScreen()
+        }
         languageRange.isHidden.toggle()
-        callSetLanguageScreen()
     }
     
     func _KOR_Tapped() {
@@ -123,25 +116,39 @@ class SetLanguageViewController: UIViewController {
         }
 
     @objc func korTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "한")
-        baseLanguage_.text = "한국어"
-        Bundle.setLanguage(lang: "ko")
+        let newLanguage = "한"
+        let newLanguageText = "한국어"
+        let currentLanguage = defaults.getLanguage()
+
+        if currentLanguage != newLanguage {
+            defaults.saveLanguage(baseLanguage: newLanguage)
+            baseLanguage_.text = newLanguageText
+            Bundle.setLanguage(lang: "ko")
+            callSetLanguageScreen()
+        }
         languageRange.isHidden.toggle()
-        callSetLanguageScreen()
+        
     }
     
-    func _UZB_Tapped() {
+    func _RUS_Tapped() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.rusTapped))
-        self._UZB.isUserInteractionEnabled = true
-        self._UZB.addGestureRecognizer(labelTap)
+        self._RUS.isUserInteractionEnabled = true
+        self._RUS.addGestureRecognizer(labelTap)
         }
 
     @objc func rusTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "RU")
-        baseLanguage_.text = "русский"
-        Bundle.setLanguage(lang: "ru")
+        let newLanguage = "RU"
+        let newLanguageText = "русский"
+        let currentLanguage = defaults.getLanguage()
+
+        if currentLanguage != newLanguage {
+            defaults.saveLanguage(baseLanguage: newLanguage)
+            baseLanguage_.text = newLanguageText
+            Bundle.setLanguage(lang: "ru")
+            callSetLanguageScreen()
+        }
+        
         languageRange.isHidden.toggle()
-        callSetLanguageScreen()
     }
 
 }

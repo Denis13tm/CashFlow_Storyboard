@@ -63,9 +63,18 @@ class ChangeLanguageViewController: UIViewController {
         }
 
     @objc func engTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "ENG")
-        Bundle.setLanguage(lang: "en")
-        callHomeScreen()
+        let newLanguage = "ENG"
+        let newLanguageText = "English"
+        let currentLanguage = defaults.getLanguage()
+        
+        if currentLanguage != newLanguage {
+            defaults.saveLanguage(baseLanguage: newLanguage)
+            english.text = newLanguageText
+            Bundle.setLanguage(lang: "en")
+            callHomeScreen()
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     private func _KOR_Tapped() {
@@ -75,9 +84,18 @@ class ChangeLanguageViewController: UIViewController {
         }
 
     @objc func korTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "한국어")
-        Bundle.setLanguage(lang: "ko")
-        callHomeScreen()
+        let newLanguage = "한"
+        let newLanguageText = "한국어"
+        let currentLanguage = defaults.getLanguage()
+        
+        if currentLanguage != newLanguage {
+            defaults.saveLanguage(baseLanguage: newLanguage)
+            korean.text = newLanguageText
+            Bundle.setLanguage(lang: "ko")
+            callHomeScreen()
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     private func _RUS_Tapped() {
@@ -87,9 +105,18 @@ class ChangeLanguageViewController: UIViewController {
         }
 
     @objc func rusTapped(_ sender: UITapGestureRecognizer) {
-        defaults.saveLanguage(baseLanguage: "RU")
-        Bundle.setLanguage(lang: "ru")
-        callHomeScreen()
+        let newLanguage = "RU"
+        let newLanguageText = "Русский"
+        let currentLanguage = defaults.getLanguage()
+
+        if currentLanguage != newLanguage {
+            defaults.saveLanguage(baseLanguage: newLanguage)
+            russian.text = newLanguageText
+            Bundle.setLanguage(lang: "ru")
+            callHomeScreen()
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 
 }

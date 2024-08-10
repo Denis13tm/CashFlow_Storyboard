@@ -51,9 +51,8 @@ class SetCurrentBalanceViewController: UIViewController, UITextFieldDelegate {
     private func initViews() {
         setLangValue()
         baseCurrency.text = defaults.getCurrency()
-        nextBtnBackgroundView.layer.cornerRadius = 18.0
-        modifierUI(ui: nextBtnBackgroundView)
-        backgroundView.layer.cornerRadius = 13.0
+        nextBtnBackgroundView.applyShadow(cornerRadius: 18.0)
+        backgroundView.applyCornerRadius(13.0)
         
         setUp_texField()
     }
@@ -65,13 +64,6 @@ class SetCurrentBalanceViewController: UIViewController, UITextFieldDelegate {
     
     @objc func changeCharacter() {
         warningLabel.isHidden = true
-    }
-    
-    private func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 10
     }
     
     private func setLangValue() {

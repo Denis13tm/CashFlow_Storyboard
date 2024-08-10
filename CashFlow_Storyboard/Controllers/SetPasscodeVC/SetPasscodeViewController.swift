@@ -23,6 +23,7 @@ class SetPasscodeViewController: UIViewController {
     
     var title3 = "title3".localized()
     var errorLabel = "errorLabel".localized()
+    var pwWarningLabel = "pwWarningLabel".localized()
     var headline = "headline".localized()
     var enterPassword = "enterPassword".localized()
     var confirmPassword = "confirmPassword".localized()
@@ -47,19 +48,9 @@ class SetPasscodeViewController: UIViewController {
     
     private func initViews() {
         setLangValue()
-        
-        nextBtn_Action.layer.cornerRadius = 18.0
-        modifierUI(ui: nextBtn_Action)
-        backgroundView.layer.cornerRadius = 13.0
-        
+        nextBtn_Action.applyShadow(cornerRadius: 18.0)
+        backgroundView.applyCornerRadius(13.0)
         setUp_texField()
-    }
-    
-    private func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 10
     }
     
     private func setLangValue() {
@@ -76,7 +67,6 @@ class SetPasscodeViewController: UIViewController {
     private func setUp_texField() {
         self.newPasscode.delegate = self
         self.confirmedPasscode.delegate = self
-    
         self.newPasscode.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
         self.confirmedPasscode.addTarget(self, action: #selector(self.changeCharacter), for: .editingChanged)
     }
@@ -99,11 +89,11 @@ class SetPasscodeViewController: UIViewController {
                     callOTPScreen()
                 }
             } else {
-                warningLabel.text = "Passwords don't match. Please try again."
+                warningLabel.text = errorLabel
                 warningLabel.isHidden = false
             }
         } else {
-            warningLabel.text = "Please enter only 4 digits password."
+            warningLabel.text = pwWarningLabel
             warningLabel.isHidden = false
         }
         

@@ -415,14 +415,14 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let actionsheet = UIAlertController(title: actionSheetTitle, message: nil, preferredStyle: .actionSheet)
             actionsheet.addAction(UIAlertAction(title: actionSheetDeleteTitle, style: .destructive, handler: { [self] _ in
                 
-                if lastTransaction.type == (expenseL + " ▼") {
+                if lastTransaction.type == "Expense ▼" || lastTransaction.type == "경비 ▼" || lastTransaction.type == "Расход ▼" {
                     totalBalance = totalBalance! + Int(lastTransaction.amount ?? "0")!
                     self.defaults.saveCashBalance(balance: String(totalBalance!))
                     if expense! >= 0 {
                         expense = expense! - Int(lastTransaction.amount ?? "0")!
                         self.defaults.saveExpense(expense: String(expense!))
                     }
-                } else if lastTransaction.type == (incomeL + " ▼") {
+                } else if lastTransaction.type == "Income ▼" || lastTransaction.type == "수입 ▼" || lastTransaction.type == "Доход ▼" {
                     totalBalance = totalBalance! - Int(lastTransaction.amount ?? "0")!
                     self.defaults.saveCashBalance(balance: String(totalBalance!))
                     if income! >= 0 {

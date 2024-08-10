@@ -28,7 +28,8 @@
 
 // Set Up OTP Screen
 "title3" = "새 암호를 설정합니다.";
-"errorLabel" = "암호가 일치하지 않습니다. 다시 시도하십시오.";
+"errorLabel" = "암호가 일치하지 않습니다. 다시 시도하십시오!";
+"pwWarningLabel" = "4자리 비밀번호를 입력하세요!";
 "headline" = "비밀번호 4자리를 입력하세요.";
 "enterPassword" = "비밀번호 입력";
 "confirmPassword" = "비밀번호 확인";
@@ -39,7 +40,7 @@
 "launching" = "시작하는 중...";
 
 // OTP Screen
-"title4" = "Cash Flow의 비밀번호를 입력하십시오";
+"title4" = "비밀번호를 입력하십시오";
 "errorL" = "암호가 틀립니다. 다시 시도하십시오!";
 "delete" = "삭제하기";
 

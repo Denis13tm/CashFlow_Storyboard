@@ -21,10 +21,12 @@
                 <outlet property="btn7_BV" destination="KYW-mR-1Ue" id="2wR-jU-ABL"/>
                 <outlet property="btn8_BV" destination="eU7-LP-Cf9" id="nld-J2-1xC"/>
                 <outlet property="btn9_BV" destination="Uil-4i-Ykl" id="Fyf-5G-ZJx"/>
+                <outlet property="deleteLabel" destination="gM6-28-ml2" id="Q8r-lq-9zO"/>
                 <outlet property="tf1" destination="L91-Qe-Yyk" id="dVY-Oi-hYD"/>
                 <outlet property="tf2" destination="aDN-Dk-pNm" id="KYE-kO-Bkh"/>
                 <outlet property="tf3" destination="arh-gd-rgt" id="upR-Y7-Kug"/>
                 <outlet property="tf4" destination="SJi-M0-nhz" id="vjw-CH-fzP"/>
+                <outlet property="titleLabel" destination="kj4-TA-AOz" id="fiW-RG-hoH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="warningLabel" destination="36g-Hf-1J8" id="DJZ-5f-uzZ"/>
             </connections>
@@ -202,7 +204,7 @@
                                         <constraint firstAttribute="width" constant="240" id="xwh-Ti-hdK"/>
                                     </constraints>
                                 </view>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong passcode. Please try again !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36g-Hf-1J8">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong passcode. Please try again !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36g-Hf-1J8">
                                     <rect key="frame" x="10" y="257.66666666666669" width="394" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     <color key="textColor" systemColor="systemRedColor"/>
@@ -665,7 +667,7 @@
         </view>
     </objects>
     <resources>
-        <image name="BackgroundImage" width="1080" height="1920"/>
+        <image name="BackgroundImage" width="360" height="640"/>
         <image name="lock.fill" catalog="system" width="125" height="128"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

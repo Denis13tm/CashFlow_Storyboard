@@ -50,18 +50,15 @@ class SetBaseCurrencyViewController: UIViewController {
     //MARK: - Methods...
     
     func initViews() {
-        
         setLangValue()
         setupLabelTap()
         
-        baseCurrency_BV.layer.cornerRadius = 13.0
-        rangeBackground.layer.cornerRadius = 13.0
-        modifierUI(ui: rangeBackground)
-        currencyRange.layer.cornerRadius = 13.0
-        bakgroundView.layer.cornerRadius = 13.0
-        baseCurrency_.layer.cornerRadius = 13.0
-        nextBtnBackgroundView.layer.cornerRadius = 18.0
-        modifierUI(ui: nextBtnBackgroundView)
+        baseCurrency_BV.applyCornerRadius(13.0)
+        rangeBackground.applyShadow(cornerRadius: 13.0)
+        currencyRange.applyCornerRadius(13.0)
+        bakgroundView.applyCornerRadius(13.0)
+        baseCurrency_.applyCornerRadius(13.0)
+        nextBtnBackgroundView.applyShadow(cornerRadius: 18.0)
     }
     
     func modifierUI(ui: UIView) {

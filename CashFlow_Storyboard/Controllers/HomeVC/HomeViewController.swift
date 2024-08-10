@@ -173,33 +173,26 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     private func getModifiedViews() {
         
-        totalBalance_BV.layer.cornerRadius = 22.0
-        modifierUI(ui: totalBalance_BV)
+        totalBalance_BV.applyShadow(cornerRadius: 22.0)
         
         totalBalance.text = Int(defaults.getCashBalance()!)?.formattedWithSeparator
         baseCurrency.text = defaults.getCurrency()
         incomeLabel.text = Int(defaults.getIncome()!)?.formattedWithSeparator
         expenseLabel.text = Int(defaults.getExpense()!)?.formattedWithSeparator
         
-        totalBalance_BIV.layer.cornerRadius = 22.0
-        totalBalance_BV.layer.cornerRadius = 22.0
-        modifierUI(ui: totalBalance_BV)
-        exp_profit_BViewImage.layer.cornerRadius = 18.0
-        exp_profit_BView.layer.cornerRadius = 18.0
-        modifierUI(ui: exp_profit_BView)
-        transactions_BViewImage.layer.cornerRadius = 18.0
-        transactions_BView.layer.cornerRadius = 18.0
-        modifierUI(ui: transactions_BView)
-        exp_cost_BViewImage.layer.cornerRadius = 18.0
-        exp_cost_BView.layer.cornerRadius = 18.0
-        modifierUI(ui: exp_cost_BView)
-        bottomSide_View.layer.cornerRadius = 22.0
-        modifierUI(ui: bottomSide_View)
-        bottomSidesItemView.layer.cornerRadius = 18.0
-        modifierUI(ui: bottomSidesItemView)
-        rightBtnBackgroundView.layer.cornerRadius = 13.0
-        centerBtnBackgroundView.layer.cornerRadius = 13.0
-        leftBtnBackgroundView.layer.cornerRadius = 13.0
+        totalBalance_BIV.applyCornerRadius(22.0)
+        totalBalance_BV.applyShadow(cornerRadius: 22.0)
+        exp_profit_BViewImage.applyCornerRadius(18.0)
+        exp_profit_BView.applyShadow(cornerRadius: 18.0)
+        transactions_BViewImage.applyCornerRadius(18.0)
+        transactions_BView.applyShadow(cornerRadius: 18.0)
+        exp_cost_BViewImage.applyCornerRadius(18.0)
+        exp_cost_BView.applyShadow(cornerRadius: 18.0)
+        bottomSide_View.applyShadow(cornerRadius: 22.0)
+        bottomSidesItemView.applyShadow(cornerRadius: 18.0)
+        rightBtnBackgroundView.applyCornerRadius(13.0)
+        centerBtnBackgroundView.applyCornerRadius(13.0)
+        leftBtnBackgroundView.applyCornerRadius(13.0)
     }
     
     private func addNavigationbar() {
@@ -289,13 +282,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nv = UINavigationController(rootViewController: vc)
         nv.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    func modifierUI(ui: UIView) {
-        ui.layer.shadowColor = UIColor.black.cgColor
-        ui.layer.shadowOpacity = 0.5
-        ui.layer.shadowOffset = .zero
-        ui.layer.shadowRadius = 5.0
     }
     
     public func animatedTableView() {
@@ -401,8 +387,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         let lastTransaction = self.transactions[indexPath.row]
         
-        let expenseL = "expenseL".localized()
-        let incomeL = "incomeL".localized()
         let actionSheetTitle = "actionSheetTitle".localized()
         let actionSheetDeleteTitle = "actionSheetDeleteTitle".localized()
         let actionSheetCancelTitle = "actionSheetCancelTitle".localized()

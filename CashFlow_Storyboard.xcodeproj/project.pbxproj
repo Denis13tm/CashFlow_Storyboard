@@ -27,7 +27,6 @@
 		F6328D2B2BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6328D292BEF0D6D00BF0E40 /* SetBaseCurrencyViewController.xib */; };
 		F66D68E32C46EF4A00D16A7F /* SelectedTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66D68E12C46EF4A00D16A7F /* SelectedTransactionViewController.swift */; };
 		F66D68E42C46EF4A00D16A7F /* SelectedTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66D68E22C46EF4A00D16A7F /* SelectedTransactionViewController.xib */; };
-		F6A500562C5639670019B21A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F6A500552C5639670019B21A /* Lottie */; };
 		F6A5005B2C563DB90019B21A /* data-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = F6A5005A2C563DB90019B21A /* data-scanning.json */; };
 		F6A5005F2C5646B00019B21A /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A5005E2C5646B00019B21A /* HelperExtensions.swift */; };
 		F6B1A67C2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A67A2BF70C6700A7D65C /* MainCoreDB.xcdatamodeld */; };
@@ -37,6 +36,7 @@
 		F6B1A6892BF756B900A7D65C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6B1A68B2BF756B900A7D65C /* Localizable.strings */; };
 		F6B1A69B2BF78DE600A7D65C /* OTPScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B1A6992BF78DE600A7D65C /* OTPScreenViewController.swift */; };
 		F6B1A69C2BF78DE600A7D65C /* OTPScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1A69A2BF78DE600A7D65C /* OTPScreenViewController.xib */; };
+		F6DA1F972EA7FC8900959E33 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F6DA1F962EA7FC8900959E33 /* Lottie */; };
 		F6E117042C64EA7900DC8D8C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E117032C64EA7900DC8D8C /* Notifications.swift */; };
 		F6E8265B2BEF368100AEE7D9 /* SetPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E826592BEF368100AEE7D9 /* SetPasscodeViewController.swift */; };
 		F6E8265C2BEF368100AEE7D9 /* SetPasscodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8265A2BEF368100AEE7D9 /* SetPasscodeViewController.xib */; };
@@ -125,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6A500562C5639670019B21A /* Lottie in Frameworks */,
+				F6DA1F972EA7FC8900959E33 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +401,7 @@
 			);
 			name = CashFlow_Storyboard;
 			packageProductDependencies = (
-				F6A500552C5639670019B21A /* Lottie */,
+				F6DA1F962EA7FC8900959E33 /* Lottie */,
 			);
 			productName = CashFlow_Storyboard;
 			productReference = F6328CFF2BEEEC6200BF0E40 /* CashFlow_Storyboard.app */;
@@ -434,7 +434,7 @@
 			);
 			mainGroup = F6328CF62BEEEC6200BF0E40;
 			packageReferences = (
-				F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				F6DA1F952EA7FC8900959E33 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = F6328D002BEEEC6200BF0E40 /* Products */;
 			projectDirPath = "";
@@ -689,6 +689,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -726,6 +727,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -756,20 +758,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		F6DA1F952EA7FC8900959E33 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
+				minimumVersion = 4.5.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F6A500552C5639670019B21A /* Lottie */ = {
+		F6DA1F962EA7FC8900959E33 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F6A500542C5639670019B21A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = F6DA1F952EA7FC8900959E33 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
